@@ -1,4 +1,6 @@
 {
   "FolderOrderSettings": [],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"spr_twanVolleEmmerIdle","order":1,"path":"sprites/spr_twanVolleEmmerIdle/spr_twanVolleEmmerIdle.yy",},
+  ],
 }
