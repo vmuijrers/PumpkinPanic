@@ -49,6 +49,7 @@
     {"id":{"name":"obj_controllerInit","path":"objects/obj_controllerInit/obj_controllerInit.yy",},"order":0,},
     {"id":{"name":"spr_twanLegeEmmerRun","path":"sprites/spr_twanLegeEmmerRun/spr_twanLegeEmmerRun.yy",},"order":0,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
+    {"id":{"name":"obj_bloempje","path":"objects/obj_bloempje/obj_bloempje.yy",},"order":0,},
     {"id":{"name":"spr_twanSchoffelRun","path":"sprites/spr_twanSchoffelRun/spr_twanSchoffelRun.yy",},"order":0,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":0,},
     {"id":{"name":"spr_swordMask","path":"sprites/spr_swordMask/spr_swordMask.yy",},"order":0,},

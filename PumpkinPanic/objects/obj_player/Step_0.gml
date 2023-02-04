@@ -127,35 +127,56 @@ if(!isRunning)
 		}
 	}
 	
-	//Start hitting
-	if (hittingStage == hitStages.none || hittingStage>=hitStages.recovering) && keyHitPressed
-	{
-		//Start Hitting!!!!!
-		hittingStage = hitStages.charging;
-		sprite_index=getSprite(guy.twan,animation.hit,currentItem)
-		image_speed=0;
-		iamge_index=0;
-		hitCharge=0;
-	}
-	if(hittingStage == hitStages.hitting)
-	{
-		image_index+=0.3;
-		if(image_index>=sprite_get_number(sprite_index)-0.5)
-		{
-			hittingStage = hitStages.recovering;
+	//ALS WE EEN SHOVEL HEBBEN KUNNEN WE BEUKEN!!!
+	if(currentItem >= item.schoffel) {
+		if (hittingStage == hitStages.none || hittingStage>=hitStages.recovering) && keyHitPressed {
+			//Start Hitting!!!!!
+			hittingStage = hitStages.charging;
+			sprite_index=getSprite(guy.twan,animation.hit,currentItem)
+			image_speed=0;
+			iamge_index=0;
+			hitCharge=0;
+		}
+		if(hittingStage == hitStages.hitting) {
+			image_index+=0.3;
+			if(image_index>=sprite_get_number(sprite_index)-0.5) {
+				hittingStage = hitStages.recovering;
+			}
+		}
+	if(keyHitReleased) {
+		if(hittingStage == hitStages.charging) {
+				hittingStage = hitStages.hitting;
+				image_index=4;
+				//BANG!!!!!
+				doRumble(myGamepad, 1, 1, room_speed / 4);
+				doRumble(myGamepad, 1, 1, room_speed / 4);
+				var ID=instance_create_depth(x,y,depth-1,obj_sword_slash)
+				ID.image_xscale = moveDir
+				ID.daddy=self.id;
+			}
 		}
 	}
-	if(keyHitReleased)
-	{
-		if(hittingStage == hitStages.charging)
-		{
-			hittingStage = hitStages.hitting;
-			image_index=4;
-			//BANG!!!!!
-			doRumble(myGamepad, 1, 1, room_speed / 4);
-			var ID=instance_create_depth(x,y,depth-1,obj_sword_slash)
-			ID.image_xscale = moveDir
-			ID.daddy=self.id;
+	else if (currentItem == item.volleemmer && keyHit) { //Met een volle emmer kunnen we in plaats van beuken water geven!!
+		//Is er een bloem, en zo ja is die dicht bij genoeg??
+		if(instance_exists(obj_bloempje)){
+			if(point_distance(x,y*2,obj_bloempje.x,obj_bloempje.y*2)<30) {
+				//Yes we have a bloemetje and an emmer!
+				with(obj_bloempje) {
+					event_user(0);
+				}
+				currentItem = item.legeemmer
+			}
+		}
+	}
+	else if (currentItem == item.none && keyHit) { //Met lege handen kunnen we pompen!
+		//Is er een pomp, en zo ja is die dicht bij genoeg??
+		if(instance_exists(obj_pomp)){
+			if(point_distance(x,y*2,obj_pomp.x-20,obj_pomp.y*2)<40) {
+				//Yes we have a bloemetje and an emmer!
+				with(obj_pomp) {
+					event_user(0);
+				}
+			}
 		}
 	}
 }

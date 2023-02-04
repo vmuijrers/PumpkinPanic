@@ -1,8 +1,9 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_pomp",
+  "name": "obj_bloempje",
   "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,},
   ],
   "managed": true,
@@ -28,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_pomp",
-    "path": "sprites/spr_pomp/spr_pomp.yy",
+    "name": "spr_bloemetje",
+    "path": "sprites/spr_bloemetje/spr_bloemetje.yy",
   },
   "spriteMaskId": null,
   "visible": true,

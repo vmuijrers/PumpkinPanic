@@ -31,6 +31,7 @@
     {"name":"obj_weapon","order":7,"path":"objects/obj_weapon/obj_weapon.yy",},
     {"name":"obj_controllerInit","order":4,"path":"objects/obj_controllerInit/obj_controllerInit.yy",},
     {"name":"spr_twanLegeEmmerRun","order":1,"path":"sprites/spr_twanLegeEmmerRun/spr_twanLegeEmmerRun.yy",},
+    {"name":"obj_bloempje","order":3,"path":"objects/obj_bloempje/obj_bloempje.yy",},
     {"name":"spr_twanSchoffelRun","order":1,"path":"sprites/spr_twanSchoffelRun/spr_twanSchoffelRun.yy",},
     {"name":"spr_swordMask","order":4,"path":"sprites/spr_swordMask/spr_swordMask.yy",},
     {"name":"spr_resourceTarget","order":2,"path":"sprites/spr_resourceTarget/spr_resourceTarget.yy",},
