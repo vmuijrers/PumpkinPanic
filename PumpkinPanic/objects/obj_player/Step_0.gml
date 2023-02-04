@@ -1,14 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 //Button maps to see how to act
-var keyR=(keyboard_check(ord("D")) || gamepad_button_check(myGamepad,gp_padr));
-var keyL=(keyboard_check(ord("A")) || gamepad_button_check(myGamepad,gp_padl));
-var keyU=(keyboard_check(ord("W")) || gamepad_button_check(myGamepad,gp_padu));
-var keyD=(keyboard_check(ord("S")) || gamepad_button_check(myGamepad,gp_padd));
+var keyR=(keyboard_check(ord("D")) || gamepad_button_check(myGamepad,gp_padr) || gamepad_axis_value(myGamepad, gp_axislh) > 0);
+var keyL=(keyboard_check(ord("A")) || gamepad_button_check(myGamepad,gp_padl) || gamepad_axis_value(myGamepad, gp_axislh) < 0);
+var keyU=(keyboard_check(ord("W")) || gamepad_button_check(myGamepad,gp_padu) || gamepad_axis_value(myGamepad, gp_axislv) < 0);
+var keyD=(keyboard_check(ord("S")) || gamepad_button_check(myGamepad,gp_padd) || gamepad_axis_value(myGamepad, gp_axislv) > 0);
 var keyRun=(keyboard_check(vk_shift) || gamepad_button_check(myGamepad,gp_face1));
 var keyHit=(keyboard_check(vk_space) || gamepad_button_check(myGamepad,gp_shoulderrb));
 var keyHitPressed=(keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(myGamepad,gp_shoulderrb))
 var keyHitReleased=(keyboard_check_released(vk_space) || gamepad_button_check_released(myGamepad,gp_shoulderrb))
+var keyInteract_pressed =(keyboard_check_pressed(vk_lshift) || gamepad_button_check(myGamepad,gp_face3));
+var keyDropItem_pressed =(keyboard_check_pressed(vk_lcontrol) || gamepad_button_check(myGamepad,gp_face2));
 isHitting=!(hittingStage == hitStages.none || hittingStage>=hitStages.recovering)
 //Movement
 if(hittingStage!=hitStages.hitting)
@@ -145,6 +147,7 @@ if(!isRunning)
 			hittingStage = hitStages.hitting;
 			image_index=4;
 			//BANG!!!!!
+			doRumble(myGamepad, 1, 1, room_speed / 4);
 			var ID=instance_create_depth(x,y,depth-1,obj_sword_slash)
 			ID.image_xscale = moveDir
 			ID.daddy=self.id;
@@ -152,23 +155,47 @@ if(!isRunning)
 	}
 }
 
+/*
 //Dingen op pakken
-if(keyboard_check_pressed(vk_space)){
+if(keyInteract_pressed){
 	//Do we have an object? try to drop it
-   if(currentResource != noone){
-	 resourceTarget = collision_circle(x,y, dropRange, obj_resourceTarget, false, true);
-	  if(resourceTarget != noone){
-		  if( DropResourceOnTarget(currentResource, resourceTarget)){
-			currentResource = noone;  
-		  }
-	  }
+     if(currentItem != item.none){
+		if(currentItem == item.gieter){
+			
+		}
 	 }else
 	 {
+		 possibleTargets = ds_list_create();
 		 //see if we can pickup an object
-		 possibleTargetObject = collision_circle(x,y, pickupRange, obj_resource, false, true);
-		 if(possibleTargetObject != noone && possibleTargetObject.owner == noone){
-			   currentResource = possibleTargetObject;
-			   currentResource.owner = self;
+		 collision_circle_list(x,y,pickupRange, obj_emmer, false, true, possibleTargets, false );
+		 dist = 100000;
+		 bestOption = noone;
+		 for (var i = 0; i < ds_list_size(possibleTargets); i++) 
+		 {
+		     // code here
+			 candidate = ds_list_find_value(possibleTargets, i);
+			 distToObject = point_distance(x,y, candidate.x, candidate.y);
+			 if(distToObject < dist && possibleTargets[i].owner == noone)
+			 {
+				 dist = distToObject;
+				 bestOption = candidate;
+			 }
+		 }
+		 if(bestOption != noone)
+		 { 
+			currentItem = bestOption;
+			currentItem.owner = self;
 		 }
 	 }
 }
+
+if(keyDropItem_pressed){
+	if(currentItem != item.none){
+		if(currentItem == item.gieter){
+				
+		}
+		
+		currentItem = item.none;
+	}
+}
+*/

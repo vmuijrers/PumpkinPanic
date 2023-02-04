@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-dropRange = 150;
-pickupRange = 150;
-currentResource = noone;
+dropRange = 50;
+pickupRange = 50;
+currentItemInstance = noone;
 resourceOffSetY = 40;
 
 //Movement Stuff
