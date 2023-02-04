@@ -150,7 +150,7 @@ if(!isRunning)
 				//BANG!!!!!
 				doRumble(myGamepad, 1, 1, room_speed / 4);
 				doRumble(myGamepad, 1, 1, room_speed / 4);
-				var ID=instance_create_depth(x,y,depth-1,obj_sword_slash)
+				var ID=instance_create_depth(x,y,depth-1,obj_swordSlash)
 				ID.image_xscale = moveDir
 				ID.daddy=self.id;
 			}
@@ -186,20 +186,27 @@ if(!isHitting && keyInteractPressed) {
 	//If we have none maybe we want to pick something up
 	if(currentItem=item.none) {
 		//Let's try picking up an emmer if we're on it
-		if(instance_exists(obj_emmer) ) {
-			if(point_distance(x,y*2,obj_emmer.x,obj_emmer.y*2)<30) {
-				//Check if we're picking up a volle or a lege emmer
-				if(obj_emmer.isFilled) {
-					currentItem = item.volleemmer;
-				}
-				else {
-					currentItem = item.legeemmer;
-				}
-				//Destroy dat emmer broer
-				with(obj_emmer) {
-					instance_destroy();
-				}
+		if(instance_exists(obj_emmer) && point_distance(x,y*2,obj_emmer.x,obj_emmer.y*2)<40) {
+			//Check if we're picking up a volle or a lege emmer
+			if(obj_emmer.isFilled) {
+				currentItem = item.volleemmer;
+			}
+			else {
+				currentItem = item.legeemmer;
+			}
+			//Destroy dat emmer broer
+			with(obj_emmer) {
+				instance_destroy();
 			}		
+		}
+		else if(instance_exists(obj_schoffel) && point_distance(x,y*2,instance_nearest(x,y,obj_schoffel).x,instance_nearest(x,y,obj_schoffel).y*2)<40) {
+			//Let's pick up that nearest shovel
+			var nrst=instance_nearest(x,y,obj_schoffel);
+			with(nrst)
+			{
+				instance_destroy();
+			}
+			currentItem = item.schoffel;
 		}
 	}
 	else
@@ -219,6 +226,12 @@ if(!isHitting && keyInteractPressed) {
 					letTheEmmerHitTheFloor.isFilled=true;
 					letTheEmmerHitTheFloor.hSpd = hSpd;
 					letTheEmmerHitTheFloor.vSpd = vSpd;
+				break;
+				case item.schoffel:
+					currentItem=item.none;
+					var gooiDieSchoffelOpDeGrond= instance_create_layer(x,y,"Instances",obj_schoffel);
+					gooiDieSchoffelOpDeGrond.hSpd = hSpd;
+					gooiDieSchoffelOpDeGrond.vSpd = vSpd;
 				break;
 			}
 	}
