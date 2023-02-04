@@ -68,8 +68,8 @@ if(hittingStage!=hitStages.hitting)
 }
 }
 //Do the zoomies
-x+=hSpd;
-y+=vSpd*verticalRatio;
+x+=(hSpd)*0.6
+y+=vSpd*verticalRatio*0.6
 //Als we bewegen moet de animatie bewegen
 movingPixels = (movingPixels*4 + point_distance(x,y/verticalRatio,xprevious,yprevious/verticalRatio))/5
 if(movingPixels>=moveSpeed*0.7)
@@ -81,7 +81,7 @@ if(movingPixels>=moveSpeed*0.7)
 	}
 	else
 	{
-		image_speed=sqrt(movingPixels/moveSpeed)*0.5
+		image_speed=sqrt(movingPixels/moveSpeed)*0.4
 	}
 
 }
@@ -90,7 +90,7 @@ else
 	if(movingPixels<=moveSpeed*0.3 && ! isHitting)
 	{
 		sprite_index=getSprite(guy.twan,animation.idle,currentItem);
-		image_speed=0.5;
+		image_speed=0.3;
 	}
 }
 //Dit is wrijving

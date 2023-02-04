@@ -6,7 +6,7 @@ currentItemInstance = noone;
 resourceOffSetY = 40;
 
 //Movement Stuff
-moveSpeed = 3
+moveSpeed = 2
 moveDir = 1;
 hSpd=0; //om huidige horizontale snelheid bij te houden
 vSpd=0; //om huidige verticale snelheid bij te houden
