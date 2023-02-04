@@ -1,9 +1,14 @@
 {
-  "FolderOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"Enemies","order":2,"path":"folders/Objects/Enemies.yy",},
+  ],
   "ResourceOrderSettings": [
+    {"name":"obj_slak","order":1,"path":"objects/obj_slak/obj_slak.yy",},
+    {"name":"takeDamage","order":2,"path":"scripts/takeDamage/takeDamage.yy",},
     {"name":"spr_vine_small_right_up_shadow","order":4,"path":"sprites/spr_vine_small_right_up_shadow/spr_vine_small_right_up_shadow.yy",},
     {"name":"spr_vine_small_right_down","order":1,"path":"sprites/spr_vine_small_right_down/spr_vine_small_right_down.yy",},
     {"name":"spr_twanVolleEmmerIdle","order":1,"path":"sprites/spr_twanVolleEmmerIdle/spr_twanVolleEmmerIdle.yy",},
+    {"name":"spr_vine_head_loop","order":5,"path":"sprites/spr_vine_head_loop/spr_vine_head_loop.yy",},
     {"name":"getSpriteVineShadow","order":1,"path":"scripts/getSpriteVineShadow/getSpriteVineShadow.yy",},
     {"name":"spr_vine_small_left_up_shadow","order":3,"path":"sprites/spr_vine_small_left_up_shadow/spr_vine_small_left_up_shadow.yy",},
     {"name":"spr_vine_small_right_down_shadow","order":2,"path":"sprites/spr_vine_small_right_down_shadow/spr_vine_small_right_down_shadow.yy",},

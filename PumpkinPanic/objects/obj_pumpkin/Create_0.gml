@@ -13,4 +13,5 @@ result = getFreeTilePosition(x,y, obj_vine);
 newVine = spawnVine(x + result[0] * halfTileWidth, y + result[1] * halfTileHeight, true, result);
 ds_list_add(allVinesList, newVine);
 
+hitPoints = 10;
 
