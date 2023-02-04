@@ -5,13 +5,17 @@ var keyR=(keyboard_check(ord("D")) || gamepad_button_check(myGamepad,gp_padr) ||
 var keyL=(keyboard_check(ord("A")) || gamepad_button_check(myGamepad,gp_padl) || gamepad_axis_value(myGamepad, gp_axislh) < 0);
 var keyU=(keyboard_check(ord("W")) || gamepad_button_check(myGamepad,gp_padu) || gamepad_axis_value(myGamepad, gp_axislv) < 0);
 var keyD=(keyboard_check(ord("S")) || gamepad_button_check(myGamepad,gp_padd) || gamepad_axis_value(myGamepad, gp_axislv) > 0);
+
 var keyRun=(keyboard_check(vk_shift) || gamepad_button_check(myGamepad,gp_face1));
-var keyHit=(keyboard_check(vk_space) || gamepad_button_check(myGamepad,gp_shoulderrb));
-var keyHitPressed=(keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(myGamepad,gp_shoulderrb))
-var keyHitReleased=(keyboard_check_released(vk_space) || gamepad_button_check_released(myGamepad,gp_shoulderrb))
-var keyInteract_pressed =(keyboard_check_pressed(vk_lshift) || gamepad_button_check(myGamepad,gp_face3));
-var keyDropItem_pressed =(keyboard_check_pressed(vk_lcontrol) || gamepad_button_check(myGamepad,gp_face2));
-isHitting=!(hittingStage == hitStages.none || hittingStage>=hitStages.recovering)
+
+var keyHit=(keyboard_check(vk_space) || gamepad_button_check(myGamepad,gp_face3));
+var keyHitPressed=(keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(myGamepad,gp_face3))
+var keyHitReleased=(keyboard_check_released(vk_space) || gamepad_button_check_released(myGamepad,gp_face3))
+
+var keyInteractPressed =(keyboard_check_pressed(vk_control) || gamepad_button_check_pressed(myGamepad,gp_face2));
+var keyInteract =(keyboard_check(vk_control) || gamepad_button_check(myGamepad,gp_face2));
+
+ isHitting=!(hittingStage == hitStages.none || hittingStage>=hitStages.recovering)
 //Movement
 if(hittingStage!=hitStages.hitting)
 {

@@ -33,4 +33,4 @@ hitCharge=0;
 myGamepad=0;
 
 //Item wielding stuff
-currentItem=item.none;
+currentItem=item.volleemmer;
