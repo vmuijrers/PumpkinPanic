@@ -7,5 +7,5 @@ for(var i=0;i<5;i++)
 }
 if(mode==1)
 {
-	draw_sprite(spr_mol,image_index,x,y)
+	draw_sprite_ext(spr_mol,image_index,x,y, -sign(xDir), 1, 0, c_white, 1)
 }
