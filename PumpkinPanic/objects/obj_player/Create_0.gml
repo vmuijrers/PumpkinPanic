@@ -30,6 +30,8 @@ hittingStage = hitStages.none;
 hitCharge=0;
 myAnimation=animation.idle
 
+isDown=false;
+
 //Controller Stuff
 myGamepad=0;
 

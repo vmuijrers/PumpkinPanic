@@ -1,6 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 //Button maps to see how to act
+if(isDown)
+{
+	if(image_index>=image_number)
+	{
+		image_index=image_number-2;
+	}
+	exit;
+}
+
 var keyR=(keyboard_check(ord("D")) || gamepad_button_check(myGamepad,gp_padr) || gamepad_axis_value(myGamepad, gp_axislh) > 0);
 var keyL=(keyboard_check(ord("A")) || gamepad_button_check(myGamepad,gp_padl) || gamepad_axis_value(myGamepad, gp_axislh) < 0);
 var keyU=(keyboard_check(ord("W")) || gamepad_button_check(myGamepad,gp_padu) || gamepad_axis_value(myGamepad, gp_axislv) < 0);
@@ -186,7 +195,15 @@ if(!isHitting && keyInteractPressed) {
 	//If we have none maybe we want to pick something up
 	if(currentItem=item.none) {
 		//Let's try picking up an emmer if we're on it
-		if(instance_exists(obj_emmer) && point_distance(x,y*2,obj_emmer.x,obj_emmer.y*2)<40) {
+		if(instance_number(obj_player)>1) {
+			//Get the other player and see if we can help him
+			var ot=instance_furthest(x,y,obj_player);
+			if(ot.isDown)
+			{
+				ot.isDown=false;
+			}
+		}
+		else if(instance_exists(obj_emmer) && point_distance(x,y*2,obj_emmer.x,obj_emmer.y*2)<40) {
 			//Check if we're picking up a volle or a lege emmer
 			if(obj_emmer.isFilled) {
 				currentItem = item.volleemmer;
@@ -211,29 +228,8 @@ if(!isHitting && keyInteractPressed) {
 	}
 	else
 	{
-			switch(currentItem)
-			{
-				case item.legeemmer:
-					currentItem=item.none;
-					var letTheEmmerHitTheFloor=instance_create_layer(x,y,"Instances",obj_emmer);
-					letTheEmmerHitTheFloor.isFilled=false;
-					letTheEmmerHitTheFloor.hSpd = hSpd;
-					letTheEmmerHitTheFloor.vSpd = vSpd;
-				break;
-				case item.volleemmer:
-					currentItem=item.none;
-					var letTheEmmerHitTheFloor= instance_create_layer(x,y,"Instances",obj_emmer);
-					letTheEmmerHitTheFloor.isFilled=true;
-					letTheEmmerHitTheFloor.hSpd = hSpd;
-					letTheEmmerHitTheFloor.vSpd = vSpd;
-				break;
-				case item.schoffel:
-					currentItem=item.none;
-					var gooiDieSchoffelOpDeGrond= instance_create_layer(x,y,"Instances",obj_schoffel);
-					gooiDieSchoffelOpDeGrond.hSpd = hSpd;
-					gooiDieSchoffelOpDeGrond.vSpd = vSpd;
-				break;
-			}
+		dropItem(currentItem);
+		currentItem=item.none;
 	}
 }
 

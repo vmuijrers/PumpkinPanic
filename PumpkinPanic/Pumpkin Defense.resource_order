@@ -1,7 +1,9 @@
 {
   "FolderOrderSettings": [],
   "ResourceOrderSettings": [
+    {"name":"dropItem","order":1,"path":"scripts/dropItem/dropItem.yy",},
     {"name":"spr_pompgrond","order":1,"path":"sprites/spr_pompgrond/spr_pompgrond.yy",},
+    {"name":"spr_twanGetHit","order":1,"path":"sprites/spr_twanGetHit/spr_twanGetHit.yy",},
     {"name":"obj_pompAchtergrond","order":1,"path":"objects/obj_pompAchtergrond/obj_pompAchtergrond.yy",},
   ],
 }
