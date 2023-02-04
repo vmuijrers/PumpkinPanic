@@ -18,9 +18,11 @@
   ],
   "ResourceOrderSettings": [
     {"name":"obj_controllerInit","order":4,"path":"objects/obj_controllerInit/obj_controllerInit.yy",},
-    {"name":"spr_teunWalk","order":1,"path":"sprites/spr_teunWalk/spr_teunWalk.yy",},
     {"name":"spr_resourceTarget","order":2,"path":"sprites/spr_resourceTarget/spr_resourceTarget.yy",},
+    {"name":"spr_twanRun","order":1,"path":"sprites/spr_twanRun/spr_twanRun.yy",},
+    {"name":"spr_twanIdle","order":2,"path":"sprites/spr_twanIdle/spr_twanIdle.yy",},
     {"name":"obj_resourceTarget","order":2,"path":"objects/obj_resourceTarget/obj_resourceTarget.yy",},
+    {"name":"getSprite","order":1,"path":"scripts/getSprite/getSprite.yy",},
     {"name":"obj_spawnUnits","order":3,"path":"objects/obj_spawnUnits/obj_spawnUnits.yy",},
     {"name":"spr_pumpkin","order":3,"path":"sprites/spr_pumpkin/spr_pumpkin.yy",},
     {"name":"obj_resource","order":1,"path":"objects/obj_resource/obj_resource.yy",},

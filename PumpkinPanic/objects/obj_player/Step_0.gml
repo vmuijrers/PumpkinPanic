@@ -57,10 +57,28 @@ if(keyD){
 x+=hSpd;
 y+=vSpd*verticalRatio;
 //Als we bewegen moet de animatie bewegen
-if(x!=xprevious ) then image_index+=0.3;
-else if(y!=yprevious ) then image_index+=0.1;
-if(hSpd*hSpd>0) then image_index+=0.2*abs(hSpd)/(acceleration/(1-fric));
-else if(vSpd*vSpd>0) then image_index+=0.1*abs(vSpd)/(acceleration/(1-fric));
+movingPixels = (movingPixels*4 + point_distance(x,y/verticalRatio,xprevious,yprevious/verticalRatio))/5
+if(movingPixels>=moveSpeed*0.7)
+{
+	if(sprite_index!=getSprite(guy.twan,animation.running,currentItem))
+	{
+		sprite_index=getSprite(guy.twan,animation.running,currentItem)
+		image_index=0;//At least 1 frame freeze on start frame
+	}
+	else
+	{
+		image_speed=sqrt(movingPixels/moveSpeed)*0.5
+	}
+
+}
+else
+{
+	if(movingPixels<=moveSpeed*0.3)
+	{
+		sprite_index=getSprite(guy.twan,animation.idle,currentItem);
+		image_speed=0.5;
+	}
+}
 //Dit is wrijving
 if(!keyRun){
 	//Kleine boost met wrijving wanneer geen shift

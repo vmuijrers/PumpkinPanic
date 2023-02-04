@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_teunIdle",
-    "path": "sprites/spr_teunIdle/spr_teunIdle.yy",
+    "name": "spr_twanIdle",
+    "path": "sprites/spr_twanIdle/spr_twanIdle.yy",
   },
   "spriteMaskId": null,
   "visible": true,
