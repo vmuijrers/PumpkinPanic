@@ -18,6 +18,17 @@ verticalRatio=0.55; // Hoe snel bewegen we verticaal
 image_speed=0;
 movingPixels=0;
 
+//Hit animation stuff and things
+enum hitStages {
+	none=-1,
+	charging=1,
+	hitting=2,
+	recovering=3
+}
+hitrecovertAt=10;
+hittingStage = hitStages.none;
+hitCharge=0;
+
 //Controller Stuff
 myGamepad=0;
 
