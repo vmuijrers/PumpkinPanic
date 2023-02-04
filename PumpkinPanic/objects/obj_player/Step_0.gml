@@ -147,7 +147,7 @@ if(!isRunning)
 			hittingStage = hitStages.hitting;
 			image_index=4;
 			//BANG!!!!!
-			doRumble(myGamepad, 1, 1, room_speed / 4);
+			//doRumble(myGamepad, 1, 1, room_speed / 4);
 			var ID=instance_create_depth(x,y,depth-1,obj_sword_slash)
 			ID.image_xscale = moveDir
 			ID.daddy=self.id;

@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_vine",
-    "path": "sprites/spr_vine/spr_vine.yy",
+    "name": "spr_vine_small_left_down",
+    "path": "sprites/spr_vine_small_left_down/spr_vine_small_left_down.yy",
   },
   "spriteMaskId": null,
   "visible": true,
