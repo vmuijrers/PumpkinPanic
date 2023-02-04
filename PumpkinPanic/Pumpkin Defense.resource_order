@@ -1,7 +1,4 @@
 {
   "FolderOrderSettings": [],
-  "ResourceOrderSettings": [
-    {"name":"spr_raaf","order":1,"path":"sprites/spr_raaf/spr_raaf.yy",},
-    {"name":"obj_raaf","order":1,"path":"objects/obj_raaf/obj_raaf.yy",},
-  ],
+  "ResourceOrderSettings": [],
 }
