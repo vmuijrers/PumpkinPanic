@@ -1,6 +1,10 @@
 {
   "FolderOrderSettings": [],
   "ResourceOrderSettings": [
+    {"name":"spr_twanSchoffelIdle","order":2,"path":"sprites/spr_twanSchoffelIdle/spr_twanSchoffelIdle.yy",},
+    {"name":"spr_twanSchoffelRun","order":3,"path":"sprites/spr_twanSchoffelRun/spr_twanSchoffelRun.yy",},
+    {"name":"spr_twanNoHandsHit","order":1,"path":"sprites/spr_twanNoHandsHit/spr_twanNoHandsHit.yy",},
     {"name":"spr_twanVolleEmmerIdle","order":1,"path":"sprites/spr_twanVolleEmmerIdle/spr_twanVolleEmmerIdle.yy",},
+    {"name":"spr_twanSchoffelHit","order":4,"path":"sprites/spr_twanSchoffelHit/spr_twanSchoffelHit.yy",},
   ],
 }

@@ -28,9 +28,11 @@ enum hitStages {
 hitrecovertAt=10;
 hittingStage = hitStages.none;
 hitCharge=0;
+myAnimation=animation.idle
 
 //Controller Stuff
 myGamepad=0;
 
 //Item wielding stuff
 currentItem=item.none;
+

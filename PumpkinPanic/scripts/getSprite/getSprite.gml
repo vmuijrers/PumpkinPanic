@@ -23,19 +23,21 @@ function getSprite(_guy,_animation,_item){
 	var spriteTree;
 	spriteTree[guy.twan][animation.idle][item.none]=spr_twanIdle;
 	spriteTree[guy.twan][animation.running][item.none]=spr_twanRun;
-	spriteTree[guy.twan][animation.hit][item.none]=spr_twanHit;
+	spriteTree[guy.twan][animation.hit][item.none]=-1;
 	
 	spriteTree[guy.twan][animation.idle][item.legeemmer]=spr_twanLegeEmmerIdle;
 	spriteTree[guy.twan][animation.running][item.legeemmer]=spr_twanLegeEmmerRun;
-	spriteTree[guy.twan][animation.hit][item.legeemmer]=spr_twanHit;
+	spriteTree[guy.twan][animation.hit][item.legeemmer]=-1;
 	
 	spriteTree[guy.twan][animation.idle][item.volleemmer]=spr_twanVolleEmmerIdle;
 	spriteTree[guy.twan][animation.running][item.volleemmer]=spr_twanVolleEmmerRun;
-	spriteTree[guy.twan][animation.hit][item.volleemmer]=spr_twanHit;	
+	spriteTree[guy.twan][animation.hit][item.volleemmer]=-1;	
+
+	spriteTree[guy.twan][animation.idle][item.schoffel]=spr_twanNoHandsIdle;
+	spriteTree[guy.twan][animation.running][item.schoffel]=spr_twanNoHandsRun;
+	spriteTree[guy.twan][animation.hit][item.schoffel]=spr_twanNoHandsHit;	
 	
-	spriteTree[guy.twan][animation.idle][item.schoffel]=spr_twanSchoffelIdle;
-	spriteTree[guy.twan][animation.running][item.schoffel]=spr_twanSchoffelRun;
-	spriteTree[guy.twan][animation.hit][item.schoffel]=spr_twanHit;	
+	myAnimation=_animation
 	
 	return( spriteTree[_guy][_animation][_item]);
 }
