@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_sword_mask",
-    "path": "sprites/spr_sword_mask/spr_sword_mask.yy",
+    "name": "spr_swordMask",
+    "path": "sprites/spr_swordMask/spr_swordMask.yy",
   },
   "spriteMaskId": null,
   "visible": true,
