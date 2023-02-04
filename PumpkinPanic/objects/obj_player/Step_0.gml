@@ -90,7 +90,7 @@ else
 	if(movingPixels<=moveSpeed*0.3 && ! isHitting)
 	{
 		sprite_index=getSprite(guy.twan,animation.idle,currentItem);
-		image_speed=0.3;
+		image_speed=0.2;
 	}
 }
 //Dit is wrijving
