@@ -15,10 +15,13 @@
     {"name":"Notes","order":13,"path":"folders/Notes.yy",},
     {"name":"Extensions","order":14,"path":"folders/Extensions.yy",},
     {"name":"Teun","order":4,"path":"folders/Sprites/Teun.yy",},
+    {"name":"Background","order":5,"path":"folders/Sprites/Background.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_controllerInit","order":4,"path":"objects/obj_controllerInit/obj_controllerInit.yy",},
     {"name":"spr_resourceTarget","order":2,"path":"sprites/spr_resourceTarget/spr_resourceTarget.yy",},
+    {"name":"obj_background","order":5,"path":"objects/obj_background/obj_background.yy",},
+    {"name":"spr_stoep","order":1,"path":"sprites/spr_stoep/spr_stoep.yy",},
     {"name":"spr_twanRun","order":1,"path":"sprites/spr_twanRun/spr_twanRun.yy",},
     {"name":"spr_twanIdle","order":2,"path":"sprites/spr_twanIdle/spr_twanIdle.yy",},
     {"name":"obj_resourceTarget","order":2,"path":"objects/obj_resourceTarget/obj_resourceTarget.yy",},
@@ -27,5 +30,6 @@
     {"name":"spr_pumpkin","order":3,"path":"sprites/spr_pumpkin/spr_pumpkin.yy",},
     {"name":"obj_resource","order":1,"path":"objects/obj_resource/obj_resource.yy",},
     {"name":"spr_resource","order":1,"path":"sprites/spr_resource/spr_resource.yy",},
+    {"name":"spr_asfalt","order":2,"path":"sprites/spr_asfalt/spr_asfalt.yy",},
   ],
 }
