@@ -13,6 +13,7 @@ var keyHitPressed=(keyboard_check_pressed(vk_space) || gamepad_button_check_pres
 var keyHitReleased=(keyboard_check_released(vk_space) || gamepad_button_check_released(myGamepad,gp_face3))
 
 var keyInteractPressed =(keyboard_check_pressed(vk_control) || gamepad_button_check_pressed(myGamepad,gp_face2));
+var keyInteractReleased =(keyboard_check_released(vk_control) || gamepad_button_check_released(myGamepad,gp_face2));
 var keyInteract =(keyboard_check(vk_control) || gamepad_button_check(myGamepad,gp_face2));
 
  isHitting=!(hittingStage == hitStages.none || hittingStage>=hitStages.recovering)
@@ -158,6 +159,51 @@ if(!isRunning)
 		}
 	}
 }
+
+//LET"S DROP IT MAYBE????
+if(!isHitting && keyInteractPressed) {
+	//If we have none maybe we want to pick something up
+	if(currentItem=item.none) {
+		//Let's try picking up an emmer if we're on it
+		if(instance_exists(obj_emmer) ) {
+			if(point_distance(x,y*2,obj_emmer.x,obj_emmer.y*2)<30) {
+				//Check if we're picking up a volle or a lege emmer
+				if(obj_emmer.isFilled) {
+					currentItem = item.volleemmer;
+				}
+				else {
+					currentItem = item.legeemmer;
+				}
+				//Destroy dat emmer broer
+				with(obj_emmer) {
+					instance_destroy();
+				}
+			}		
+		}
+	}
+	else
+	{
+			switch(currentItem)
+			{
+				case item.legeemmer:
+					currentItem=item.none;
+					var letTheEmmerHitTheFloor=instance_create_layer(x,y,"Instances",obj_emmer);
+					letTheEmmerHitTheFloor.isFilled=false;
+					letTheEmmerHitTheFloor.hSpd = hSpd;
+					letTheEmmerHitTheFloor.vSpd = vSpd;
+				break;
+				case item.volleemmer:
+					currentItem=item.none;
+					var letTheEmmerHitTheFloor= instance_create_layer(x,y,"Instances",obj_emmer);
+					letTheEmmerHitTheFloor.isFilled=true;
+					letTheEmmerHitTheFloor.hSpd = hSpd;
+					letTheEmmerHitTheFloor.vSpd = vSpd;
+				break;
+			}
+	}
+}
+
+
 
 /*
 //Dingen op pakken

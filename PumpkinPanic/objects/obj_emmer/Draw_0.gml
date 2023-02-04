@@ -5,5 +5,3 @@ if(isFilled){
 }else{
 	draw_sprite(sprite_index, 0, x, y);	
 }
-
-draw_circle(x,y, waterRadius, true);
