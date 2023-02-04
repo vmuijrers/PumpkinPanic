@@ -159,7 +159,7 @@ if(!isRunning)
 	else if (currentItem == item.volleemmer && keyHit) { //Met een volle emmer kunnen we in plaats van beuken water geven!!
 		//Is er een bloem, en zo ja is die dicht bij genoeg??
 		if(instance_exists(obj_bloempje)){
-			if(point_distance(x,y*2,obj_bloempje.x,obj_bloempje.y*2)<30) {
+			if(point_distance(x,y*2,obj_bloempje.x,obj_bloempje.y*2)<40) {
 				//Yes we have a bloemetje and an emmer!
 				with(obj_bloempje) {
 					event_user(0);
