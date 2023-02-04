@@ -14,8 +14,11 @@
     {"name":"Animation Curves","order":12,"path":"folders/Animation Curves.yy",},
     {"name":"Notes","order":13,"path":"folders/Notes.yy",},
     {"name":"Extensions","order":14,"path":"folders/Extensions.yy",},
+    {"name":"Teun","order":4,"path":"folders/Sprites/Teun.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"obj_controllerInit","order":4,"path":"objects/obj_controllerInit/obj_controllerInit.yy",},
+    {"name":"spr_teunWalk","order":1,"path":"sprites/spr_teunWalk/spr_teunWalk.yy",},
     {"name":"spr_resourceTarget","order":2,"path":"sprites/spr_resourceTarget/spr_resourceTarget.yy",},
     {"name":"obj_resourceTarget","order":2,"path":"objects/obj_resourceTarget/obj_resourceTarget.yy",},
     {"name":"obj_spawnUnits","order":3,"path":"objects/obj_spawnUnits/obj_spawnUnits.yy",},
