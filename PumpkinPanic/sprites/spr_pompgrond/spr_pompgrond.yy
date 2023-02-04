@@ -1,11 +1,11 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_pomp",
-  "bbox_bottom": 115,
-  "bbox_left": 53,
-  "bbox_right": 110,
-  "bbox_top": 45,
+  "name": "spr_pompgrond",
+  "bbox_bottom": 147,
+  "bbox_left": 10,
+  "bbox_right": 137,
+  "bbox_top": 84,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a63c66c8-f3c5-41b0-9a3c-0c1a51d01f56",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bc04d6ac-e48d-4d9e-aff2-b9151b62ec4b",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 148,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2e8c4eae-5ce1-40bf-8984-0254b005c64a","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1aa4f07a-8c30-410b-876c-7ad24736fc26","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 9,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_pomp",
+    "name": "spr_pompgrond",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a63c66c8-f3c5-41b0-9a3c-0c1a51d01f56","path":"sprites/spr_pomp/spr_pomp.yy",},},},"Disabled":false,"id":"48d0fb21-0ae9-43c1-80c2-57d7c07bc17a","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bc04d6ac-e48d-4d9e-aff2-b9151b62ec4b","path":"sprites/spr_pompgrond/spr_pompgrond.yy",},},},"Disabled":false,"id":"fb36681d-77b5-46ba-aa0c-5f7ef00c0d05","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

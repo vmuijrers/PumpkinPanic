@@ -171,7 +171,7 @@ if(!isRunning)
 	else if (currentItem == item.none && keyHit) { //Met lege handen kunnen we pompen!
 		//Is er een pomp, en zo ja is die dicht bij genoeg??
 		if(instance_exists(obj_pomp)){
-			if(point_distance(x,y*2,obj_pomp.x-20,obj_pomp.y*2)<40) {
+			if(point_distance(x,y*2,obj_pomp.x-32,(obj_pomp.y-28)*2)<40) {
 				//Yes we have a bloemetje and an emmer!
 				with(obj_pomp) {
 					event_user(0);
