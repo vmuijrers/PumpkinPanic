@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-offY=-16
+/*offY=-16
 for(var ii=0;ii<room_height/16;ii++) {
 	if(ii mod 2 == 0) {
 		offX=-32
