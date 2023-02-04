@@ -2,11 +2,12 @@
 // You can write your code in this editor
 if(state == state.dead) {return;}
 player = instance_nearest(x,y, obj_player);
-if(point_distance(player.x,player.y, x, y)< 25){
-	state = state.dead;
-	return;
+if(player != noone) { 
+	if(point_distance(player.x,player.y, x, y)< 25){
+		state = state.dead;
+		return;
+	}
 }
-
 if(target != noone){
 	distToTarget = point_distance(x,y, target.x, target.y);	
 	if(distToTarget > attackRange){
@@ -27,13 +28,14 @@ if(state == state.move){
 	x += 1.0 / room_speed * dx;
 	y += 1.0 / room_speed * dy;
 	
-}else if (state ==state.attack){
+}else if (state == state.attack){
 	
 	if(alarm[0] < 0)
 	{
 		alarm[0] = fireRate;
 		//attack!
-		target.hitPoints -= damage;
+		takeDamage(target, damage);	
+
 	}
 	
 }

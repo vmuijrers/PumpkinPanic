@@ -1,10 +1,13 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function takeDamage(damage){
+function takeDamage(target, damage){
 	
-	hitPoints -= damage;
-	if(hitPoints <= 0){
-		//Game Over!	
+	with(target){
+		hitPoints -= damage;
+		if(hitPoints <= 0){
+			//Game Over!	
+		}
+		img = 1;
+		alarm[0] = 16;
 	}
-	alarm[0] = 10;
 }

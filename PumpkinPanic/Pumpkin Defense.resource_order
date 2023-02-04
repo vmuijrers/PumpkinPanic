@@ -1,7 +1,17 @@
 {
-  "FolderOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"Pumpkin","order":2,"path":"folders/Sprites/Pumpkin.yy",},
+  ],
   "ResourceOrderSettings": [
+    {"name":"spr_pumpkin_03","order":3,"path":"sprites/spr_pumpkin_03/spr_pumpkin_03.yy",},
+    {"name":"spr_pumpkin_06","order":5,"path":"sprites/spr_pumpkin_06/spr_pumpkin_06.yy",},
+    {"name":"spr_pumpkin_02","order":1,"path":"sprites/spr_pumpkin_02/spr_pumpkin_02.yy",},
+    {"name":"spr_pumpkin_00","order":8,"path":"sprites/spr_pumpkin_00/spr_pumpkin_00.yy",},
+    {"name":"spr_pumpkin_05","order":4,"path":"sprites/spr_pumpkin_05/spr_pumpkin_05.yy",},
     {"name":"spr_raaf","order":1,"path":"sprites/spr_raaf/spr_raaf.yy",},
+    {"name":"spr_pumpkin_04","order":2,"path":"sprites/spr_pumpkin_04/spr_pumpkin_04.yy",},
+    {"name":"spr_pumpkin_07","order":6,"path":"sprites/spr_pumpkin_07/spr_pumpkin_07.yy",},
+    {"name":"spr_pumpkin_08","order":7,"path":"sprites/spr_pumpkin_08/spr_pumpkin_08.yy",},
     {"name":"obj_raaf","order":1,"path":"objects/obj_raaf/obj_raaf.yy",},
   ],
 }

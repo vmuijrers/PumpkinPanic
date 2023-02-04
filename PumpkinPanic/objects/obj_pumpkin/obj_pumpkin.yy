@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_pumpkin",
-    "path": "sprites/spr_pumpkin/spr_pumpkin.yy",
+    "name": "spr_pumpkin_00",
+    "path": "sprites/spr_pumpkin_00/spr_pumpkin_00.yy",
   },
   "spriteMaskId": null,
   "visible": true,
