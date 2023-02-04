@@ -1,6 +1,8 @@
 {
   "FolderOrderSettings": [
     {"name":"Enemies","order":2,"path":"folders/Objects/Enemies.yy",},
+    {"name":"Snail","order":6,"path":"folders/Sprites/Snail.yy",},
+    {"name":"Mol","order":7,"path":"folders/Sprites/Mol.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_slak","order":1,"path":"objects/obj_slak/obj_slak.yy",},
@@ -8,7 +10,9 @@
     {"name":"spr_vine_small_right_up_shadow","order":4,"path":"sprites/spr_vine_small_right_up_shadow/spr_vine_small_right_up_shadow.yy",},
     {"name":"spr_vine_small_right_down","order":1,"path":"sprites/spr_vine_small_right_down/spr_vine_small_right_down.yy",},
     {"name":"spr_twanVolleEmmerIdle","order":1,"path":"sprites/spr_twanVolleEmmerIdle/spr_twanVolleEmmerIdle.yy",},
+    {"name":"spr_snail_dead","order":1,"path":"sprites/spr_snail_dead/spr_snail_dead.yy",},
     {"name":"spr_vine_head_loop","order":5,"path":"sprites/spr_vine_head_loop/spr_vine_head_loop.yy",},
+    {"name":"obj_enemySpawner","order":2,"path":"objects/obj_enemySpawner/obj_enemySpawner.yy",},
     {"name":"getSpriteVineShadow","order":1,"path":"scripts/getSpriteVineShadow/getSpriteVineShadow.yy",},
     {"name":"spr_vine_small_left_up_shadow","order":3,"path":"sprites/spr_vine_small_left_up_shadow/spr_vine_small_left_up_shadow.yy",},
     {"name":"spr_vine_small_right_down_shadow","order":2,"path":"sprites/spr_vine_small_right_down_shadow/spr_vine_small_right_down_shadow.yy",},

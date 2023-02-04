@@ -20,7 +20,9 @@ if(random(10) > 5){
 for (var i = 0; i < numVines; ++i) {
 	curVine = ds_list_find_value(allVinesList, i);
     if(curVine.isHead){
-		curVine.isHead = false;
+		with(curVine){
+			alarm[0] = 30;	
+		}
 		result = getFreeTilePosition(curVine.x + curVine.growDir[0] * halfTileWidth,curVine.y+ curVine.growDir[1] * halfTileHeight, obj_vine);
 		if(result[0] == 0 && result[0] == 0){
 			//cant spawn vine

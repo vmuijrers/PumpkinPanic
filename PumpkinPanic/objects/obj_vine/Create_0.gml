@@ -8,3 +8,4 @@ curSprite = 0;
 maxSpritePerLevel = [8, 15, 22];
 
 loopDir = 1;
+alarm[1] = 60;
