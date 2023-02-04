@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-for(var i=0;i<=room_width/64;i++)
+/*for(var i=0;i<=room_width/64;i++)
 {
 	for(var ii=0;ii<room_height/16;ii++)
 	{
