@@ -1,12 +1,17 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+//Button maps to see how to act
+var keyR=(keyboard_check(ord("D")) || gamepad_button_check(myGamepad,gp_padr));
+var keyL=(keyboard_check(ord("A")) || gamepad_button_check(myGamepad,gp_padl));
+var keyU=(keyboard_check(ord("W")) || gamepad_button_check(myGamepad,gp_padu));
+var keyD=(keyboard_check(ord("S")) || gamepad_button_check(myGamepad,gp_padd));
+var keyRun=(keyboard_check(vk_shift) || gamepad_button_check(myGamepad,gp_face1));
 //Movement
-if(keyboard_check(ord("D"))){
+if(keyR){
 	moveDir = 1;
-	if(keyboard_check(vk_shift))
+	if(keyRun)
 	{
-		x += moveSpeed*acceleration;	
+		x += moveSpeed*acceleration*0.5;	
 		if hSpd<0 then hSpd+=acceleration;
 		hSpd+=acceleration;
 	}
@@ -14,12 +19,11 @@ if(keyboard_check(ord("D"))){
 		x+=moveSpeed;
 	}
 }
-
-if(keyboard_check(ord("A"))){
+if(keyL){
 	moveDir = -1;
-	if(keyboard_check(vk_shift))
+	if(keyRun)
 	{
-		x -=moveSpeed*acceleration	
+		x -=moveSpeed*acceleration	*0.5
 		if hSpd>0 then hSpd-=acceleration;
 		hSpd-=acceleration
 	}
@@ -27,45 +31,43 @@ if(keyboard_check(ord("A"))){
 		x-=moveSpeed
 	}
 }
-
-if(keyboard_check(ord("W"))){ 
-	if(keyboard_check(vk_shift))
+if(keyU){ 
+	if(keyRun)
 	{
-		y -= moveSpeed * 0.7 * acceleration
+		y -= moveSpeed * verticalRatio * acceleration *0.5
 		if vSpd>0 then vSpd-=acceleration;
 		vSpd-=acceleration
 	}
 	else{
-		y -= moveSpeed * 0.7;	
+		y -= moveSpeed * verticalRatio;	
 	}
 }
-
-if(keyboard_check(ord("S"))){
-	if(keyboard_check(vk_shift))
+if(keyD){
+	if(keyRun)
 	{
-	    y += moveSpeed * 0.7 * acceleration;
+	    y += moveSpeed * verticalRatio * acceleration *0.5
 		if vSpd<0 then vSpd+=acceleration;
 		vSpd+=acceleration
 	}
 	else{
-		y += moveSpeed * 0.7;
+		y += moveSpeed * verticalRatio;
 	}
 }
 //Do the zoomies
 x+=hSpd;
-y+=vSpd*0.7;
+y+=vSpd*verticalRatio;
 //Als we bewegen moet de animatie bewegen
 if(x!=xprevious ) then image_index+=0.3;
 else if(y!=yprevious ) then image_index+=0.1;
 if(hSpd*hSpd>0) then image_index+=0.2*abs(hSpd)/(acceleration/(1-fric));
 else if(vSpd*vSpd>0) then image_index+=0.1*abs(vSpd)/(acceleration/(1-fric));
 //Dit is wrijving
-if(!keyboard_check(vk_shift)){
+if(!keyRun){
 	//Kleine boost met wrijving wanneer geen shift
-	if hSpd>0 then hSpd-=acceleration*0.1;
-	if hSpd<0 then hSpd+=acceleration*0.1;
-	if vSpd>0 then vSpd-=acceleration*0.1;
-	if vSpd<0 then vSpd+=acceleration*0.1;
+	if hSpd>0 then hSpd-=acceleration*0.05;
+	if hSpd<0 then hSpd+=acceleration*0.05;
+	if vSpd>0 then vSpd-=acceleration*0.05;
+	if vSpd<0 then vSpd+=acceleration*0.05;
 }
 var mDir = point_direction(0,0,hSpd,vSpd)
 var mSpd = point_distance(0,0,hSpd,vSpd);
