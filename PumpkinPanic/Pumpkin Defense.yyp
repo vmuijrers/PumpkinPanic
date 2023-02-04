@@ -102,6 +102,8 @@
     {"id":{"name":"spr_asfalt","path":"sprites/spr_asfalt/spr_asfalt.yy",},"order":0,},
     {"id":{"name":"spr_vine_small_right_down_shadow","path":"sprites/spr_vine_small_right_down_shadow/spr_vine_small_right_down_shadow.yy",},"order":0,},
     {"id":{"name":"obj_pumpkin","path":"objects/obj_pumpkin/obj_pumpkin.yy",},"order":0,},
+    {"id":{"name":"spr_mol","path":"sprites/spr_mol/spr_mol.yy",},"order":0,},
+    {"id":{"name":"obj_mol","path":"objects/obj_mol/obj_mol.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "RoomOrderNodes": [
