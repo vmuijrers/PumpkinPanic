@@ -6,7 +6,7 @@ currentItemInstance = noone;
 resourceOffSetY = 40;
 
 //Movement Stuff
-moveSpeed = 3
+moveSpeed = 2
 moveDir = 1;
 hSpd=0; //om huidige horizontale snelheid bij te houden
 vSpd=0; //om huidige verticale snelheid bij te houden
@@ -28,9 +28,11 @@ enum hitStages {
 hitrecovertAt=10;
 hittingStage = hitStages.none;
 hitCharge=0;
+myAnimation=animation.idle
 
 //Controller Stuff
 myGamepad=0;
 
 //Item wielding stuff
 currentItem=item.none;
+
