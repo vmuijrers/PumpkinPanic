@@ -10,3 +10,4 @@ if(instance_exists(obj_emmer))
 	}
 
 }
+image_speed=0.3
