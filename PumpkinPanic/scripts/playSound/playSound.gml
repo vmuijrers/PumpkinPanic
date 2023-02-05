@@ -12,7 +12,9 @@ enum sound {
 	killbird=8,
 	weaponswing=9,
 	weaponcharge=10,
-	swatintro=11
+	swatintro=11,
+	killman=12,
+	killswat=13
 }
 function playSound(soundEffect){
 	sound = -1;
@@ -58,6 +60,12 @@ function playSound(soundEffect){
 		break;
 		case sound.swatintro:
 			sound=SWATVan_A;
+		break;
+		case sound.killman:
+			sound=choose(KillMan_A_1_60_150ms_200ms,KillMan_A_2_60_150ms_200ms,KillMan_A_3_60_150ms_200ms,KillMan_A_4_60_150ms_200ms,KillMan_A_5_60_150ms_200ms,KillMan_A_6_60_150ms_200ms)
+		break;
+		case sound.killswat:
+			sound=choose(KillSWAT_A_1_60_150ms_250ms,KillSWAT_A_2_60_150ms_250ms,KillSWAT_A_3_60_150ms_250ms,KillSWAT_A_4_60_150ms_250ms,KillSWAT_A_5_60_150ms_250ms);
 		break;
 	}
 	audio_play_sound(sound,100,false)

@@ -6,3 +6,5 @@ state = buur_state.dead;
 with(obj_enemySpawner){
 	alarm[4] = 60;
 }
+
+playSound(sound.killswat)
