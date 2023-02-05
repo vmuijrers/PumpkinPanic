@@ -21,3 +21,6 @@ cy=min(cy,room_height-540)
 
 cam = view_camera[0]
 camera_set_view_pos(cam,cx,cy)
+
+obj_overlay.x=cx;
+obj_overlay.y=cy;
