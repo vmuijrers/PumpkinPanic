@@ -1,4 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-//Creat the popo
-instance_create_layer(0,0, "Instances", obj_swat_car);
+img = 0;
+maxSwat = 3;
+curSwat = 0;
+alarm[0] = 120;
+
+playSound(sound.swatintro);
