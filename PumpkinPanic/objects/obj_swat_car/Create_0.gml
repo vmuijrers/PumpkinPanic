@@ -3,4 +3,6 @@
 img = 0;
 maxSwat = 4;
 curSwat = 0;
-alarm[0] = 66;
+alarm[0] = 120;
+
+playSound(sound.swatintro);

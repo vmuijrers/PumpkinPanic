@@ -197,6 +197,7 @@
     {"id":{"name":"FootstepGrass_B_6","path":"sounds/FootstepGrass_B_6/FootstepGrass_B_6.yy",},"order":0,},
     {"id":{"name":"WeapChargeLoop_A_2","path":"sounds/WeapChargeLoop_A_2/WeapChargeLoop_A_2.yy",},"order":0,},
     {"id":{"name":"obj_pumpkin","path":"objects/obj_pumpkin/obj_pumpkin.yy",},"order":0,},
+    {"id":{"name":"SWATVan_A","path":"sounds/SWATVan_A/SWATVan_A.yy",},"order":0,},
     {"id":{"name":"spr_buurman_talk","path":"sprites/spr_buurman_talk/spr_buurman_talk.yy",},"order":0,},
     {"id":{"name":"spr_pumpkin_08","path":"sprites/spr_pumpkin_08/spr_pumpkin_08.yy",},"order":0,},
     {"id":{"name":"BucketEmpty_A_4","path":"sounds/BucketEmpty_A_4/BucketEmpty_A_4.yy",},"order":0,},

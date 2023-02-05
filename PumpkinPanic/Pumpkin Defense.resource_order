@@ -84,6 +84,7 @@
     {"name":"obj_swat_car","order":2,"path":"objects/obj_swat_car/obj_swat_car.yy",},
     {"name":"FootstepGrass_B_6","order":5,"path":"sounds/FootstepGrass_B_6/FootstepGrass_B_6.yy",},
     {"name":"WeapChargeLoop_A_2","order":63,"path":"sounds/WeapChargeLoop_A_2/WeapChargeLoop_A_2.yy",},
+    {"name":"SWATVan_A","order":66,"path":"sounds/SWATVan_A/SWATVan_A.yy",},
     {"name":"spr_buurman_talk","order":16,"path":"sprites/spr_buurman_talk/spr_buurman_talk.yy",},
     {"name":"BucketEmpty_A_4","order":21,"path":"sounds/BucketEmpty_A_4/BucketEmpty_A_4.yy",},
     {"name":"WeapChargeStart_A_5","order":58,"path":"sounds/WeapChargeStart_A_5/WeapChargeStart_A_5.yy",},

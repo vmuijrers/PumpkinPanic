@@ -11,7 +11,8 @@ enum sound {
 	killmole=7,
 	killbird=8,
 	weaponswing=9,
-	weaponcharge=10
+	weaponcharge=10,
+	swatintro=11
 }
 function playSound(soundEffect){
 	sound = -1;
@@ -54,7 +55,10 @@ function playSound(soundEffect){
 		break;
 		case sound.weaponcharge:
 			sound=choose(WeapChargeStart_A_1,WeapChargeStart_A_2,WeapChargeStart_A_3,WeapChargeStart_A_4,WeapChargeStart_A_5,WeapChargeStart_A_6)
-		
+		break;
+		case sound.swatintro:
+			sound=SWATVan_A;
+		break;
 	}
 	audio_play_sound(sound,100,false)
 }
