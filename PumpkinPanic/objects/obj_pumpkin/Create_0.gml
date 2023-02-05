@@ -14,21 +14,22 @@ newVine = spawnVine(x + result[0] * halfTileWidth, y + result[1] * halfTileHeigh
 ds_list_add(allVinesList, newVine);
 
 img = 0;
-
+game_over = -1;
+win_game = false;
 hitPoints = 5;
 maxHealth = 5;
 level_Sprites[0] = spr_pumpkin_00;
-level_Sprites[1] = spr_pumpkin_01;
-level_Sprites[2] = spr_pumpkin_02;
-level_Sprites[3] = spr_pumpkin_03;
-level_Sprites[4] = spr_pumpkin_04;
-level_Sprites[5] = spr_pumpkin_05;
-level_Sprites[6] = spr_pumpkin_06;
-level_Sprites[7] = spr_pumpkin_07;
-level_Sprites[8] = spr_pumpkin_08;
-level_Sprites[9] = spr_pumpkin_09;
-level_Sprites[10] = spr_pumpkin_10;
-level_Sprites[11] = spr_pumpkin_11;
+//level_Sprites[1] = spr_pumpkin_01;
+level_Sprites[1] = spr_pumpkin_02;
+level_Sprites[2] = spr_pumpkin_03;
+//level_Sprites[4] = spr_pumpkin_04;
+level_Sprites[3] = spr_pumpkin_05;
+//level_Sprites[6] = spr_pumpkin_06;
+level_Sprites[4] = spr_pumpkin_07;
+//level_Sprites[8] = spr_pumpkin_08;
+level_Sprites[5] = spr_pumpkin_09;
+level_Sprites[6] = spr_pumpkin_10;
+level_Sprites[7] = spr_pumpkin_11;
 
 flowerList = ds_list_create();
 var newFlower = instance_create_layer(x - 64,y, "Instances",obj_bloempje);

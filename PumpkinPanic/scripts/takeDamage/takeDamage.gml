@@ -5,7 +5,8 @@ function takeDamage(target, damage){
 	with(target){
 		hitPoints -= 1;
 		if(hitPoints <= 0){
-			//Game Over!	
+			//Game Over!
+			game_over = 1;
 		}
 		img = 1;
 		alarm[0] = 16;

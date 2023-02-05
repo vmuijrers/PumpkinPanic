@@ -2,14 +2,13 @@
 // You can write your code in this editor
 //Grow
 
-
-
 level+=1;
 level = clamp(level, 0, maxLevel);
 numVines = ds_list_size(allVinesList);
-
+hitPoints += 1;
+hitPoints = clamp(hitPoints, 0, maxHealth);
 //grow vines
-if(level >= 5){
+if(level >= 4){
 	for (var i = 0; i < ds_list_size(allVinesList); ++i) {
 		curVine = ds_list_find_value(allVinesList, i);
 	    curVine.level += vineLevelIncrease;	

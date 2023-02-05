@@ -61,6 +61,7 @@
     {"id":{"name":"FootstepGrass_B_5","path":"sounds/FootstepGrass_B_5/FootstepGrass_B_5.yy",},"order":0,},
     {"id":{"name":"WeapSwing_A_3","path":"sounds/WeapSwing_A_3/WeapSwing_A_3.yy",},"order":0,},
     {"id":{"name":"BucketFill_A_1","path":"sounds/BucketFill_A_1/BucketFill_A_1.yy",},"order":0,},
+    {"id":{"name":"spr_game_over","path":"sprites/spr_game_over/spr_game_over.yy",},"order":0,},
     {"id":{"name":"obj_weapon","path":"objects/obj_weapon/obj_weapon.yy",},"order":0,},
     {"id":{"name":"spr_bloemetje_interact","path":"sprites/spr_bloemetje_interact/spr_bloemetje_interact.yy",},"order":0,},
     {"id":{"name":"spr_SWAT_idle","path":"sprites/spr_SWAT_idle/spr_SWAT_idle.yy",},"order":0,},
@@ -95,6 +96,7 @@
     {"id":{"name":"FootstepGrass_B_7","path":"sounds/FootstepGrass_B_7/FootstepGrass_B_7.yy",},"order":0,},
     {"id":{"name":"spr_resourceTarget","path":"sprites/spr_resourceTarget/spr_resourceTarget.yy",},"order":0,},
     {"id":{"name":"FootstepPavement_B_7","path":"sounds/FootstepPavement_B_7/FootstepPavement_B_7.yy",},"order":0,},
+    {"id":{"name":"spr_Intro","path":"sprites/spr_Intro/spr_Intro.yy",},"order":0,},
     {"id":{"name":"obj_swat_car1","path":"objects/obj_swat_car1/obj_swat_car1.yy",},"order":0,},
     {"id":{"name":"WeapChargeStart_A_1","path":"sounds/WeapChargeStart_A_1/WeapChargeStart_A_1.yy",},"order":0,},
     {"id":{"name":"KillSlug_A_2_60_100ms_150ms","path":"sounds/KillSlug_A_2_60_100ms_150ms/KillSlug_A_2_60_100ms_150ms.yy",},"order":0,},
@@ -199,6 +201,7 @@
     {"id":{"name":"spr_buurman_dead","path":"sprites/spr_buurman_dead/spr_buurman_dead.yy",},"order":0,},
     {"id":{"name":"FootstepPavement_B_6","path":"sounds/FootstepPavement_B_6/FootstepPavement_B_6.yy",},"order":0,},
     {"id":{"name":"spr_vine_small_left_down_shadow","path":"sprites/spr_vine_small_left_down_shadow/spr_vine_small_left_down_shadow.yy",},"order":0,},
+    {"id":{"name":"Room3","path":"rooms/Room3/Room3.yy",},"order":0,},
     {"id":{"name":"spr_pumpkin_04","path":"sprites/spr_pumpkin_04/spr_pumpkin_04.yy",},"order":0,},
     {"id":{"name":"getSpriteVineShadow","path":"scripts/getSpriteVineShadow/getSpriteVineShadow.yy",},"order":0,},
     {"id":{"name":"BucketFill_A_3","path":"sounds/BucketFill_A_3/BucketFill_A_3.yy",},"order":0,},
@@ -235,6 +238,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
