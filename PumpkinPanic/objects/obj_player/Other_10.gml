@@ -19,7 +19,9 @@ for (var i = 0; i < instance_number(obj_player); ++i;)
 }
 if(allDown){
 	with(obj_pumpkin){
-		game_over = 0;	
+		if(game_over == -1){
+			game_over = 0;
+		}
 	}
 }
 currentItem=item.none;

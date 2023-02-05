@@ -22,12 +22,12 @@ if(hittingStage>hitStages.hitting && hitCounter>5)
 }
 
 
-
+	speedModifier = 1.0;
 if(collision_point(x,y, obj_vine, false, true)){
 	var nrvine = instance_nearest(x,y,obj_vine);
-	speedModifier = 1.0 - slowFactor;
-}else{
-	speedModifier = 1.0;	
+	if(nrvine.level != -1){
+		speedModifier = 1.0 - slowFactor;
+	}
 }
 moveSpeed = maxMoveSpeed * speedModifier;
 
