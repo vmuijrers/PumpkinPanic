@@ -88,6 +88,7 @@ if(hittingStage!=hitStages.hitting)
 	}
 }
 //Do the zoomies
+
 x+=(hSpd)*0.6
 y+=vSpd*verticalRatio*0.6
 //Als we bewegen moet de animatie bewegen
@@ -134,14 +135,14 @@ vSpd=lengthdir_y(mSpd*(fric),mDir)
 
 
 //Dit is al de slaan logica
-var isRunning=(abs(hSpd)>=moveSpeed*1.1 || abs(vSpd)>=moveSpeed*1.1 || keyRun)
+var isRunning=(keyRun)
 if(!isRunning)
 {
 	//Continue charging
 	if(hittingStage == hitStages.charging && keyHit)
 	{
 		hitCharge+=1;
-		image_index+=sqrt(hitCharge)*0.2;
+		image_index+=0.3
 		if(image_index>3)
 		{
 			image_index=1
@@ -161,14 +162,14 @@ if(!isRunning)
 		}
 		if(hittingStage == hitStages.hitting) {
 			image_index+=0.3;
-			if(image_index>=sprite_get_number(sprite_index)-0.5) {
+			if(image_index>=sprite_get_number(sprite_index)-1) {
 				hittingStage = hitStages.recovering;
 			}
 		}
 	if(keyHitReleased) {
 		if(hittingStage == hitStages.charging) {
 				hittingStage = hitStages.hitting;
-				image_index=4;
+				image_index=5;
 				//BANG!!!!!
 				doRumble(myGamepad, 1, 1, room_speed / 4);
 				var ID=instance_create_depth(x,y,depth-1,obj_swordSlash)

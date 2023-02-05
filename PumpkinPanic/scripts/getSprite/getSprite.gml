@@ -37,9 +37,9 @@ function getSprite(_guy,_animation,_item){
 	spriteTree[guy.twan][animation.hit][item.volleemmer]=spr_twanHit;	
 	spriteTree[guy.twan][animation.gethit][item.volleemmer]=spr_twanGetHit;
 	
-	spriteTree[guy.twan][animation.idle][item.schoffel]=spr_twanSchoffelIdle; 
-	spriteTree[guy.twan][animation.running][item.schoffel]=spr_twanSchoffelRun;
-	spriteTree[guy.twan][animation.hit][item.schoffel]=spr_twanHit;	
+	spriteTree[guy.twan][animation.idle][item.schoffel]=spr_twanGeenArmenIdle; 
+	spriteTree[guy.twan][animation.running][item.schoffel]=spr_twanGeenArmenRun;
+	spriteTree[guy.twan][animation.hit][item.schoffel]=spr_twanGeenArmenRun;	
 	spriteTree[guy.twan][animation.gethit][item.schoffel]=spr_twanGetHit;
 	
 	return( spriteTree[_guy][_animation][_item]);
