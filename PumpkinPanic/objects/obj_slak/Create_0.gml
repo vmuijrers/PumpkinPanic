@@ -15,3 +15,4 @@ attackRange = 20;
 moveSpeed = 10;
 image_speed = 0.1
 fireRate = room_speed;
+hitPoints = 1;

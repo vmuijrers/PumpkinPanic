@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(isDead) {return;}
 target = instance_nearest(x,y, obj_player);
 if(mode ==0)
 {

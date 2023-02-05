@@ -3,9 +3,11 @@
 
 
 //Getting hit
+
 if(currentItem != item.none){
 	dropItem(currentItem);
 }
+
 currentItem=item.none;
 isDown=true;
 sprite_index=getSprite(guy.twan,animation.gethit,currentItem);

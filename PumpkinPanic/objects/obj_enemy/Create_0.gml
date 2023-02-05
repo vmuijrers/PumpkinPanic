@@ -3,3 +3,4 @@
 targetType = noone;
 target = noone;
 moveSpeed = 3;
+hitPoints = 1;

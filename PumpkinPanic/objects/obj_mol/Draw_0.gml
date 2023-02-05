@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(isDead){
+	img += 0.2;
+	img = clamp(img,0, 5);
+	draw_sprite(spr_mol_dead,img,x,y);	
+	exit;
+}
 for(var i=0;i<5;i++)
 {
 	if(i==pieces-1 && mode ==0) continue;

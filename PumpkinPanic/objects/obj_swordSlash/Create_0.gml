@@ -24,5 +24,5 @@ for(var i=0;i<images;i++)
 }
 
 image_index=imag[0]
-
+damage = 10;
 hasfocus=0

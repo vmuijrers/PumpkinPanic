@@ -158,7 +158,6 @@ if(!isRunning)
 				image_index=4;
 				//BANG!!!!!
 				doRumble(myGamepad, 1, 1, room_speed / 4);
-				doRumble(myGamepad, 1, 1, room_speed / 4);
 				var ID=instance_create_depth(x,y,depth-1,obj_swordSlash)
 				ID.image_xscale = moveDir
 				ID.daddy=self.id;

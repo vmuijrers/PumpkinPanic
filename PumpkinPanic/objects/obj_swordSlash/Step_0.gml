@@ -18,4 +18,15 @@ else
 	}
 }
 
+var result = ds_list_create();
+var _num = collision_circle_list(x,y,40,obj_enemy, false, true,result,false);
+if (_num > 0)
+{
+    for (var i = 0; i < _num; ++i;)
+    {
+        enemy = ds_list_find_value(result, i);
+		enemyTakeDamage(enemy, damage);
+    }
+}
+ds_list_destroy(result);
 hasfocus=0;

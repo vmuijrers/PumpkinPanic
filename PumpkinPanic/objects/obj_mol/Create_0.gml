@@ -4,6 +4,7 @@ moveDir = point_direction(x,y*2,obj_player.x,obj_player.y*2);
 moveSpd=2
 pieces =40;
 xDir = 1;
+isDead = false;
 for(var i=0;i<pieces;i++)
 {
 	pieceX[i]=x+i*moveSpd;
@@ -11,5 +12,5 @@ for(var i=0;i<pieces;i++)
 }
 
 mode =0; 
-
+hitPoints = 1;
 alarm[0]=180
