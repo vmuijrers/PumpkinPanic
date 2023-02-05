@@ -83,6 +83,7 @@
     {"id":{"name":"spr_vine_small_right_up_shadow","path":"sprites/spr_vine_small_right_up_shadow/spr_vine_small_right_up_shadow.yy",},"order":0,},
     {"id":{"name":"getSpriteVine","path":"scripts/getSpriteVine/getSpriteVine.yy",},"order":0,},
     {"id":{"name":"obj_vine","path":"objects/obj_vine/obj_vine.yy",},"order":0,},
+    {"id":{"name":"spr_pompgrond","path":"sprites/spr_pompgrond/spr_pompgrond.yy",},"order":0,},
     {"id":{"name":"spr_twanIdle","path":"sprites/spr_twanIdle/spr_twanIdle.yy",},"order":0,},
     {"id":{"name":"obj_waterTarget","path":"objects/obj_waterTarget/obj_waterTarget.yy",},"order":0,},
     {"id":{"name":"getSprite","path":"scripts/getSprite/getSprite.yy",},"order":0,},
@@ -119,6 +120,8 @@
     {"id":{"name":"spr_bloemetje_open","path":"sprites/spr_bloemetje_open/spr_bloemetje_open.yy",},"order":0,},
     {"id":{"name":"obj_raaf","path":"objects/obj_raaf/obj_raaf.yy",},"order":0,},
     {"id":{"name":"obj_mol","path":"objects/obj_mol/obj_mol.yy",},"order":0,},
+    {"id":{"name":"spr_twanGetHit","path":"sprites/spr_twanGetHit/spr_twanGetHit.yy",},"order":0,},
+    {"id":{"name":"obj_pompAchtergrond","path":"objects/obj_pompAchtergrond/obj_pompAchtergrond.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "RoomOrderNodes": [
