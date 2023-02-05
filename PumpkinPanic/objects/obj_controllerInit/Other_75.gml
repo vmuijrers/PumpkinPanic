@@ -9,9 +9,9 @@ case "gamepad discovered":                     // A game pad has been discovered
     var pad = async_load[? "pad_index"];       // Get the pad index value from the async_load map
     gamepad_set_axis_deadzone(pad, 0.5);       // Set the "deadzone" for the axis
     gamepad_set_button_threshold(pad, 0.1);    // Set the "threshold" for the triggers
-	show_message("New player");
-	show_message(pad)
-	var iii = instance_create_layer(200,200,"Instances" ,obj_player)
+	//show_message("New player");
+	//show_message(pad)
+	var iii = instance_create_layer(200+random(100),200+random(50),"Instances" ,obj_player)
 	iii.myGamepad=pad;
 
 	break;
