@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 //if(global.waiting) exit;
+
 x=daddy.x
 y=daddy.y
 anim+=0.25;
@@ -17,6 +18,7 @@ else
 		image_index+=8;
 	}
 }
+if(!canHit){exit;}
 
 var result = ds_list_create();
 var _num = collision_circle_list(x ,y- 15,attackRange,obj_enemy, false, true,result,false);
@@ -27,6 +29,7 @@ if (_num > 0)
         enemy = ds_list_find_value(result, i);
 		if(enemy.hitPoints > 0){
 			enemyTakeDamage(self, enemy, damage);
+			canHit = false;
 			break;
 		}
     }

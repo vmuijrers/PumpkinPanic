@@ -16,7 +16,7 @@ image_speed = 0.2
 state = bird_state.move;
 damage = 1;
 attackRange = 20;
-moveSpeed = 1;
+moveSpeed = 1.5;
 moveDir = 1;
 fireRate = room_speed;
 

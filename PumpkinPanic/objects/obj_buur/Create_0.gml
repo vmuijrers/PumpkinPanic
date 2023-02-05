@@ -10,7 +10,7 @@ state = buur_state.move;
 event_inherited();
 attackRange = 40;
 moveSpeed = 3;
-hitPoints = 20;
+hitPoints = 10;
 
 img = 0;
 image_speed = 0.4

@@ -4,7 +4,7 @@ image_speed=0;
 
 anim=0;
 
-
+canHit = true;
 images=4;
 for(var i=0;i<images;i++)
 {
