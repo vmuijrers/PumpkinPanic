@@ -27,10 +27,11 @@ enum hitStages {
 	hitting=2,
 	recovering=3
 }
-hitrecovertAt=10;
+hitrecovertAt=30;
 hittingStage = hitStages.none;
 hitCharge=0;
 myAnimation=animation.idle
+hitCounter=0;
 
 isDown=false;
 
