@@ -134,7 +134,7 @@ vSpd=lengthdir_y(mSpd*(fric),mDir)
 
 
 //Dit is al de slaan logica
-var isRunning=(abs(hSpd)>0 || abs(vSpd)>0)
+var isRunning=(abs(hSpd)>=moveSpeed*1.1 || abs(vSpd)>=moveSpeed*1.1 || keyRun)
 if(!isRunning)
 {
 	//Continue charging
