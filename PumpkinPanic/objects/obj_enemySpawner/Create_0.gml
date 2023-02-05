@@ -7,3 +7,4 @@ maxLevel = 7;
 //alarm[1] = 10;
 //alarm[2] = 10;
 //alarm[5] = 10;
+//alarm[3] = 10;
