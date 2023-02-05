@@ -10,4 +10,14 @@ if(instance_exists(obj_emmer))
 	}
 
 }
+else
+{
+	nrst=instance_nearest(x+200,y+200,obj_player)
+	if(point_distance(x+32,(y+18)*2,nrst.x,nrst.y*2) <=30)
+	{
+		if(nrst.currentItem==item.legeemmer) then nrst.currentItem=item.volleemmer
+	}
+
+	
+}
 image_speed=0.3
