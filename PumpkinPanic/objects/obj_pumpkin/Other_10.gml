@@ -7,6 +7,16 @@
 level+=1;
 level = clamp(level, 0, maxLevel);
 numVines = ds_list_size(allVinesList);
+
+//grow vines
+if(level >= 5){
+	for (var i = 0; i < ds_list_size(allVinesList); ++i) {
+		curVine = ds_list_find_value(allVinesList, i);
+	    curVine.level += vineLevelIncrease;	
+	}
+}
+
+
 //spawn a new vine
 with(obj_enemySpawner){
 	event_user(0);
@@ -42,14 +52,7 @@ for (var i = 0; i < numVines; ++i) {
 		}
 	}
 }
-//grow vines
-if(level >= 5){
-	
-	for (var i = 0; i < ds_list_size(allVinesList); ++i) {
-		curVine = ds_list_find_value(allVinesList, i);
-	    curVine.level += vineLevelIncrease;
-	}
-}
+//slow factor
 
 //spawn new flowers
 alarm[1] = 60;

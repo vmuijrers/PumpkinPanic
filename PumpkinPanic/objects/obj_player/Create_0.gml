@@ -7,6 +7,8 @@ resourceOffSetY = 40;
 
 //Movement Stuff
 moveSpeed = 2
+maxMoveSpeed = 2;
+slowFactor = 0.2;
 moveDir = 1;
 hSpd=0; //om huidige horizontale snelheid bij te houden
 vSpd=0; //om huidige verticale snelheid bij te houden
@@ -39,3 +41,5 @@ myGamepad=0;
 currentItem=item.none;
 
 footStepCounter=0;
+
+speedModifier = 1.0;

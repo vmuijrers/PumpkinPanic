@@ -14,6 +14,13 @@ if(isDown)
 	*/
 	exit;
 }
+if(collision_point(x,y, obj_vine, false, true)){
+	var nrvine = instance_nearest(x,y,obj_vine);
+	speedModifier = 1.0 - slowFactor * (1 + clamp(nrvine.level,-1, 3));
+}else{
+	speedModifier = 1.0;	
+}
+moveSpeed = maxMoveSpeed * speedModifier;
 
 var keyR=(keyboard_check(ord("D")) || gamepad_button_check(myGamepad,gp_padr) || gamepad_axis_value(myGamepad, gp_axislh) > 0);
 var keyL=(keyboard_check(ord("A")) || gamepad_button_check(myGamepad,gp_padl) || gamepad_axis_value(myGamepad, gp_axislh) < 0);
@@ -82,8 +89,8 @@ if(hittingStage!=hitStages.hitting)
 }
 }
 //Do the zoomies
-x+=(hSpd)*0.6
-y+=vSpd*verticalRatio*0.6
+x+=(hSpd)*0.6 * speedModifier
+y+=vSpd*verticalRatio*0.6 * speedModifier
 //Als we bewegen moet de animatie bewegen
 movingPixels = (movingPixels*4 + point_distance(x,y/verticalRatio,xprevious,yprevious/verticalRatio))/5
 if(movingPixels>=moveSpeed*0.7)

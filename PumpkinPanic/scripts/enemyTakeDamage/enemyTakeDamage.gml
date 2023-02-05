@@ -3,12 +3,15 @@
 function enemyTakeDamage(source, target, damage){
 	
 	with(target){
+		if(hitPoints <= 0){exit;}
 		hitPoints -= damage;
-		event_user(2);//hit
+		
 		if(hitPoints <= 0){
 			event_user(1);
 			fx = lengthdir_x(10, point_direction(source.x, source.y, target.x, target.y));
 			zz = -6;
+		}else{
+			event_user(2);//hit	
 		}
 	}
 }

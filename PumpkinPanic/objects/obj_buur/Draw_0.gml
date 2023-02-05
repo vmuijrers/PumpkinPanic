@@ -12,6 +12,6 @@ if(state == buur_state.move){
 	draw_sprite_ext(spr_buurman_hit, -1, x, y,xDir,1,0, c_white,1);
 }else if(state == buur_state.dead){
 	img += 0.2;
-	img = clamp(img, 0, sprite_get_number(spr_SWAT_dead) -1);
+	img = clamp(img, 0, sprite_get_number(spr_buurman_dead) -1);
 	draw_sprite_ext(spr_buurman_dead, img, x, y,xDir,1,0, c_white,1);
 }

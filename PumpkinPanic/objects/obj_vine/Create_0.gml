@@ -10,4 +10,4 @@ maxSpritePerLevel = [8, 15, 22];
 loopDir = 1;
 alarm[1] = 60;
 img =0;//for the shrubbery
-showVine = random(100) > 50;
+showVine = irandom(100) > 75;

@@ -30,3 +30,10 @@ if (_num > 0)
 }
 ds_list_destroy(result);
 hasfocus=0;
+
+var nrstVine = instance_nearest(x,y,obj_vine);
+if(nrstVine != noone && point_distance(x,y, nrstVine.x, nrstVine.y) < 40){
+	with(nrstVine){
+		event_user(0);	
+	}
+}

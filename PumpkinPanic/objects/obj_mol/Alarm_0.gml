@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(isDead){exit;}
 target = instance_nearest(x,y, obj_player);
 
 if(point_distance(x,y, target.x, target.y) < 30){
