@@ -17,6 +17,7 @@
     {"name":"spr_ME_intro_3","order":7,"path":"sprites/spr_ME_intro_3/spr_ME_intro_3.yy",},
     {"name":"KillBird_A_2_60_150ms_150ms","order":46,"path":"sounds/KillBird_A_2_60_150ms_150ms/KillBird_A_2_60_150ms_150ms.yy",},
     {"name":"GetHit_F_1_50_150ms_500ms","order":31,"path":"sounds/GetHit_F_1_50_150ms_500ms/GetHit_F_1_50_150ms_500ms.yy",},
+    {"name":"Script12","order":4,"path":"scripts/Script12/Script12.yy",},
     {"name":"playSound","order":3,"path":"scripts/playSound/playSound.yy",},
     {"name":"GetHit_F_3_50_150ms_500ms","order":33,"path":"sounds/GetHit_F_3_50_150ms_500ms/GetHit_F_3_50_150ms_500ms.yy",},
     {"name":"Radio_stereo_positional","order":65,"path":"sounds/Radio_stereo_positional/Radio_stereo_positional.yy",},

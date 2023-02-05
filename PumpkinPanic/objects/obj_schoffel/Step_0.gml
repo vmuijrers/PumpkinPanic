@@ -13,3 +13,5 @@ if(abs(vSpd)<0.2)
 {
 	vSpd=0;
 }
+setDepth();
+depth-=1

@@ -13,3 +13,5 @@ if(abs(zz) >= 0.5){
 	}
 	y = startY + fy;
 }
+
+setDepth();

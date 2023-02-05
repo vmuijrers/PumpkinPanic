@@ -30,3 +30,6 @@ if (_num > 0)
 }
 ds_list_destroy(result);
 hasfocus=0;
+
+setDepth();
+depth-=1;

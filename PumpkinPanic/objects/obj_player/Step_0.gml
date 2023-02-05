@@ -191,13 +191,16 @@ if(!isRunning)
 	else if (currentItem == item.none && keyHit) { //Met lege handen kunnen we pompen!
 		//Is er een pomp, en zo ja is die dicht bij genoeg??
 		if(instance_exists(obj_pomp)){
-			if(point_distance(x,y*2,obj_pomp.x-32,(obj_pomp.y-28)*2)<40) {
+			if(point_distance(x,y*2,obj_pomp.x-32,(obj_pomp.y-12)*2)<40) {
 				//Yes we have a emmer to fill
-				if(!obj_emmer.isFilled)
+				if(instance_exists(obj_emmer))
 				{
-					playSound(sound.bucketfill);
-					with(obj_pomp) {
-						event_user(0);
+					if(!obj_emmer.isFilled)
+					{
+						playSound(sound.bucketfill);
+						with(obj_pomp) {
+							event_user(0);
+						}
 					}
 				}
 			}
@@ -256,6 +259,8 @@ if(footStepCounter>6)
 	footStepCounter=0;
 	playSound(sound.footstep);
 }
+setDepth();
+depth-=1
 
 /*
 //Dingen op pakken
