@@ -6,7 +6,7 @@ if(keyboard_check_pressed(vk_space)){
 }
 
 setDepth();
-if(keyboard_check_pressed(vk_escape)){
+if(keyboard_check_pressed(vk_enter)){
 	//room_goto(Room2);	
-	room_restart();
+	game_restart();
 }
