@@ -25,7 +25,7 @@ if (_num > 0)
     for (var i = 0; i < _num; ++i;)
     {
         enemy = ds_list_find_value(result, i);
-		enemyTakeDamage(enemy, damage);
+		enemyTakeDamage(self, enemy, damage);
     }
 }
 ds_list_destroy(result);

@@ -10,7 +10,7 @@ if(state == bird_state.move){
 	dy = 0;
 	num = 0;
 	//flocking
-	if(instance_number(obj_mol) > 1){
+	if(instance_number(obj_raaf) > 1){
 		otherMole = collision_circle(x,y, 20, obj_raaf, false, true);
 		if(otherMole != noone){
 			moveDirFlock = point_direction(otherMole.x, otherMole.y,x,y);

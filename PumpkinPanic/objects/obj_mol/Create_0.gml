@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+event_inherited();
 moveDir = point_direction(x,y*2,obj_player.x,obj_player.y*2);
 moveSpd=2
 pieces =40;
