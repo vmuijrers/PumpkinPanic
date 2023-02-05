@@ -8,7 +8,9 @@ if(point_distance(x,y, target.x, target.y) < 30){
 	image_speed=0.5
 	image_index=0
 	alarm[1]=84
+	alarm[2]=42;//attack
 	moveSpd=0;
+
 }else{
 	mode = 0;
 	alarm[0] = 30;	

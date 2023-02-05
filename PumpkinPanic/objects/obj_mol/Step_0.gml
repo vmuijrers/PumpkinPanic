@@ -3,8 +3,30 @@
 target = instance_nearest(x,y, obj_player);
 if(mode ==0)
 {
-	x+=lengthdir_x(moveSpd,moveDir);
-	y+=lengthdir_y(moveSpd,moveDir)*0.5;
+	if(target != noone && point_distance(x,y, target.x,target.y) >= 30){
+		moveDirFlock = 0;
+		dx = 0;
+		dy = 0;
+		num = 0;
+		//flocking
+		if(instance_number(obj_mol) > 1){
+			otherMole = collision_circle(x,y, 20, obj_mol, false, true);
+			if(otherMole != noone){
+				moveDirFlock = point_direction(otherMole.x, otherMole.y,x,y);
+				dx += lengthdir_x(moveSpd,moveDirFlock);
+				dy += lengthdir_y(moveSpd,moveDirFlock);
+				num++;
+			}
+		}
+		
+		moveDir = point_direction(x,y,target.x,target.y);
+		dx += lengthdir_x(moveSpd,moveDir);
+		dy += lengthdir_y(moveSpd,moveDir);
+		num++;
+		xDir = sign(dx);
+		x += dx / num;
+		y += dy / num * 0.5;
+	}
 	for(var i=1;i<pieces;i++)
 	{
 		pieceX[i-1]=pieceX[i]
@@ -12,7 +34,5 @@ if(mode ==0)
 	}
 	pieceX[pieces-1]=x
 	pieceY[pieces-1]=y
-	xDir = sign(lengthdir_x(moveSpd,moveDir));
-	moveDir = point_direction(x,y*2,target.x,target.y*2);
 	moveSpd= 2;
 }
