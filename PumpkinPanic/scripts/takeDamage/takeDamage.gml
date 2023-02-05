@@ -3,7 +3,7 @@
 function takeDamage(target, damage){
 	
 	with(target){
-		hitPoints -= damage;
+		hitPoints -= 1;
 		if(hitPoints <= 0){
 			//Game Over!	
 		}

@@ -70,6 +70,7 @@
     {"name":"spr_shrubbery","order":9,"path":"sprites/spr_shrubbery/spr_shrubbery.yy",},
     {"name":"WeapSwing_A_4","order":55,"path":"sounds/WeapSwing_A_4/WeapSwing_A_4.yy",},
     {"name":"KillSlug_A_4_60_100ms_150ms","order":37,"path":"sounds/KillSlug_A_4_60_100ms_150ms/KillSlug_A_4_60_100ms_150ms.yy",},
+    {"name":"spr_pumpkin_health","order":24,"path":"sprites/spr_pumpkin_health/spr_pumpkin_health.yy",},
     {"name":"Death_F_3_0_500ms_1500ms","order":30,"path":"sounds/Death_F_3_0_500ms_1500ms/Death_F_3_0_500ms_1500ms.yy",},
     {"name":"KillSlug_A_3_60_100ms_150ms","order":36,"path":"sounds/KillSlug_A_3_60_100ms_150ms/KillSlug_A_3_60_100ms_150ms.yy",},
     {"name":"WeapChargeStart_A_4","order":57,"path":"sounds/WeapChargeStart_A_4/WeapChargeStart_A_4.yy",},

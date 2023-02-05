@@ -165,6 +165,7 @@
     {"id":{"name":"WeapSwing_A_4","path":"sounds/WeapSwing_A_4/WeapSwing_A_4.yy",},"order":0,},
     {"id":{"name":"KillSlug_A_4_60_100ms_150ms","path":"sounds/KillSlug_A_4_60_100ms_150ms/KillSlug_A_4_60_100ms_150ms.yy",},"order":0,},
     {"id":{"name":"spr_vine_small_right_up","path":"sprites/spr_vine_small_right_up/spr_vine_small_right_up.yy",},"order":0,},
+    {"id":{"name":"spr_pumpkin_health","path":"sprites/spr_pumpkin_health/spr_pumpkin_health.yy",},"order":0,},
     {"id":{"name":"obj_emmer","path":"objects/obj_emmer/obj_emmer.yy",},"order":0,},
     {"id":{"name":"Death_F_3_0_500ms_1500ms","path":"sounds/Death_F_3_0_500ms_1500ms/Death_F_3_0_500ms_1500ms.yy",},"order":0,},
     {"id":{"name":"KillSlug_A_3_60_100ms_150ms","path":"sounds/KillSlug_A_3_60_100ms_150ms/KillSlug_A_3_60_100ms_150ms.yy",},"order":0,},

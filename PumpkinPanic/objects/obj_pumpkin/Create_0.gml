@@ -15,7 +15,8 @@ ds_list_add(allVinesList, newVine);
 
 img = 0;
 
-hitPoints = 10;
+hitPoints = 5;
+maxHealth = 5;
 level_Sprites[0] = spr_pumpkin_00;
 level_Sprites[1] = spr_pumpkin_01;
 level_Sprites[2] = spr_pumpkin_02;
