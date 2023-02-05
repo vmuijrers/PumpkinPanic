@@ -5,5 +5,5 @@ alarm[0] = 16;
 scale = 1
 with(obj_pumpkin)
 {
-	event_user(0)
+	event_user(1)
 }

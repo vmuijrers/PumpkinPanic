@@ -1,13 +1,18 @@
 {
   "FolderOrderSettings": [],
   "ResourceOrderSettings": [
+    {"name":"spr_ME_intro_3","order":7,"path":"sprites/spr_ME_intro_3/spr_ME_intro_3.yy",},
     {"name":"spr_mol_dead","order":3,"path":"sprites/spr_mol_dead/spr_mol_dead.yy",},
     {"name":"spr_enemy_mask","order":4,"path":"sprites/spr_enemy_mask/spr_enemy_mask.yy",},
     {"name":"spr_raaf_attack","order":2,"path":"sprites/spr_raaf_attack/spr_raaf_attack.yy",},
     {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
     {"name":"spr_pompgrond","order":1,"path":"sprites/spr_pompgrond/spr_pompgrond.yy",},
+    {"name":"spr_ME_intro_4","order":8,"path":"sprites/spr_ME_intro_4/spr_ME_intro_4.yy",},
+    {"name":"spr_shrubbery","order":9,"path":"sprites/spr_shrubbery/spr_shrubbery.yy",},
     {"name":"enemyTakeDamage","order":1,"path":"scripts/enemyTakeDamage/enemyTakeDamage.yy",},
+    {"name":"spr_ME_intro_2","order":6,"path":"sprites/spr_ME_intro_2/spr_ME_intro_2.yy",},
     {"name":"spr_raaf_dead","order":1,"path":"sprites/spr_raaf_dead/spr_raaf_dead.yy",},
+    {"name":"spr_ME_intro_1","order":5,"path":"sprites/spr_ME_intro_1/spr_ME_intro_1.yy",},
     {"name":"spr_twanGetHit","order":1,"path":"sprites/spr_twanGetHit/spr_twanGetHit.yy",},
     {"name":"obj_pompAchtergrond","order":1,"path":"objects/obj_pompAchtergrond/obj_pompAchtergrond.yy",},
   ],

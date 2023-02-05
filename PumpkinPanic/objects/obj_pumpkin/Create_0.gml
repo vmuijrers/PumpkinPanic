@@ -3,7 +3,7 @@
 random_set_seed(random_get_seed())
 level = 0;
 maxLevel = 10;
-vineLevelIncrease = 1;
+vineLevelIncrease = 0.5;
 flowersPerLevel = 1;
 halfTileWidth = 32;
 halfTileHeight = 16;

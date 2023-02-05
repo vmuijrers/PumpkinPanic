@@ -24,8 +24,14 @@ if(isHead){
 
 curSprite += 0.2;
 curSprite = min(curSprite, maxSpritePerLevel[min(level, 2)]);
+img += 0.2;
+img = clamp(img, 0, 4);
 draw_sprite_ext(getSpriteVineShadow(growDir, level), curSprite, x, y,1,1,0,c_white,1);
-draw_sprite_ext(getSpriteVine(growDir, level), curSprite, x, y,1,1,0,isHead?c_white :c_white,1);
+draw_sprite_ext(spr_shrubbery, img, x, y,1,1,0,c_white,1);
+if(showVine)
+{
+	draw_sprite_ext(getSpriteVine(growDir, level), curSprite, x, y,1,1,0,isHead?c_white :c_white,1);
+}
 
 }
 //draw_arrow(x,y, x + growDir[0] * 32, y + growDir[1] * 16, 1);

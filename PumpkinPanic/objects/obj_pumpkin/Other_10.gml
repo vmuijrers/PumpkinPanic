@@ -1,16 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 //Grow
-nextLevel = true;
-for (var i = 0; i < ds_list_size(flowerList); ++i) {
-    // code here
-	var flower = ds_list_find_value(flowerList, i);
-	nextLevel &= flower.isOpen;
-}
-if(!nextLevel)
-{
-	return;
-}
+
 
 
 level+=1;
@@ -18,16 +9,17 @@ level = clamp(level, 0, maxLevel);
 numVines = ds_list_size(allVinesList);
 //spawn a new vine
 
-if(random(10) > 5){
-	
-	var result = getFreeTilePosition(x,y, obj_vine);
+
+for(var i =0; i < min(level, 2); i++){
+	randomVine = ds_list_find_value(allVinesList, irandom(ds_list_size(allVinesList)-1));
+	var result = getFreeTilePosition(randomVine.x,randomVine.y, obj_vine);
 	if(!(result[0] == 0 && result[0] == 0)){
 			//cant spawn vine
-		newVine = spawnVine(x  + result[0] * halfTileWidth, y + result[1] * halfTileHeight, true, result);
+		newVine = spawnVine(randomVine.x  + result[0] * halfTileWidth, randomVine.y + result[1] * halfTileHeight, true, result);
 		ds_list_add(allVinesList, newVine);
 	}
-
 }
+
 
 
 for (var i = 0; i < numVines; ++i) {
