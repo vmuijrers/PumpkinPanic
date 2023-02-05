@@ -185,20 +185,25 @@ if(!isRunning)
 				ID.daddy=self.id;
 				playSound(sound.weaponswing);
 				
-				if(hitCharge>30)
+				if(hitCharge>=45)
 				{
 					ID.damage = 20;
 					ID.attackRange = 96;
+				}
+				else if(hitCharge>=30)
+				{
+					ID.damage = 15;
+					ID.attackRange = 72;
 				}
 				else if(hitCharge>15)
 				{
 					ID.damage = 10;
 					ID.attackRange = 48;
 				}
-				else if(hitCharge>15)
+				else
 				{
 					ID.damage = 5;
-					ID.attackRange = 24;
+					ID.attackRange = 36;
 				}
 				ID.image_xscale = moveDir * (ID.attackRange/48);
 			}
