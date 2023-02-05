@@ -17,6 +17,7 @@
     {"name":"spr_SWAT_hit","order":13,"path":"sprites/spr_SWAT_hit/spr_SWAT_hit.yy",},
     {"name":"spr_ME_intro_2","order":6,"path":"sprites/spr_ME_intro_2/spr_ME_intro_2.yy",},
     {"name":"spr_raaf_dead","order":1,"path":"sprites/spr_raaf_dead/spr_raaf_dead.yy",},
+    {"name":"dropItem","order":2,"path":"scripts/dropItem/dropItem.yy",},
     {"name":"spr_ME_intro_1","order":5,"path":"sprites/spr_ME_intro_1/spr_ME_intro_1.yy",},
     {"name":"spr_SWAT_move","order":10,"path":"sprites/spr_SWAT_move/spr_SWAT_move.yy",},
     {"name":"obj_swat_car","order":2,"path":"objects/obj_swat_car/obj_swat_car.yy",},

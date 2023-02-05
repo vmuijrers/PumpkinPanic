@@ -22,16 +22,11 @@ if(state == swat_state.run){
 			num++;
 		}
 	}
-	
+	moveDir = point_direction(x,y, nearest_player.x, nearest_player.y);
 	if(distToPlayer < attackRange){
-		moveDir = point_direction(x,y, nearest_player.x, nearest_player.y);
 		state = swat_state.attack;
-	}else{
-		//move to target	
-		moveDir = point_direction(x,y, nearest_player.x, nearest_player.y);
 	}
 	
-	moveDir = point_direction(x,y, nearest_player.x, nearest_player.y);
 	dx += lengthdir_x(moveSpeed,moveDir);
 	dy += lengthdir_y(moveSpeed,moveDir);
 	num+=1.0;

@@ -120,6 +120,7 @@
     {"id":{"name":"getFreeTilePosition","path":"scripts/getFreeTilePosition/getFreeTilePosition.yy",},"order":0,},
     {"id":{"name":"spr_raaf_dead","path":"sprites/spr_raaf_dead/spr_raaf_dead.yy",},"order":0,},
     {"id":{"name":"obj_enemySpawner","path":"objects/obj_enemySpawner/obj_enemySpawner.yy",},"order":0,},
+    {"id":{"name":"dropItem","path":"scripts/dropItem/dropItem.yy",},"order":0,},
     {"id":{"name":"spr_ME_intro_1","path":"sprites/spr_ME_intro_1/spr_ME_intro_1.yy",},"order":0,},
     {"id":{"name":"spawnVine","path":"scripts/spawnVine/spawnVine.yy",},"order":0,},
     {"id":{"name":"spr_vine_small_left_down_shadow","path":"sprites/spr_vine_small_left_down_shadow/spr_vine_small_left_down_shadow.yy",},"order":0,},
