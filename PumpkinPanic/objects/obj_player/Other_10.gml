@@ -3,7 +3,7 @@
 
 
 //Getting hit
-
+playSound(sound.gethit);
 if(currentItem != item.none){
 	dropItem(currentItem);
 }

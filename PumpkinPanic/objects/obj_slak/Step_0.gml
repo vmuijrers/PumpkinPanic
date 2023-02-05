@@ -5,6 +5,7 @@ player = instance_nearest(x,y, obj_player);
 if(player != noone) { 
 	if(point_distance(player.x,player.y, x, y)< 25){
 		state = state.dead;
+		playSound(sound.killslug)
 		return;
 	}
 }

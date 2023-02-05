@@ -12,3 +12,5 @@ for (var i = 0; i < global.gamepads; i++;)
         global.gp[i] = false;
     }
 }
+
+audio_play_sound(Radio_stereo_positional,10,true)

@@ -96,6 +96,7 @@ if(movingPixels>=moveSpeed*0.7)
 	else
 	{
 		image_speed=sqrt(movingPixels/moveSpeed)*0.4
+		footStepCounter+=sqrt(movingPixels/moveSpeed)*0.4
 	}
 
 }
@@ -147,6 +148,7 @@ if(!isRunning)
 			//Start Hitting!!!!!
 			hittingStage = hitStages.charging;
 			sprite_index=getSprite(guy.twan,animation.hit,currentItem)
+			playSound(sound.weaponcharge);
 			image_speed=0;
 			iamge_index=0;
 			hitCharge=0;
@@ -166,6 +168,7 @@ if(!isRunning)
 				var ID=instance_create_depth(x,y,depth-1,obj_swordSlash)
 				ID.image_xscale = moveDir
 				ID.daddy=self.id;
+				playSound(sound.weaponswing);
 			}
 		}
 	}
@@ -175,6 +178,7 @@ if(!isRunning)
 			var nrstBloem = instance_nearest(x,y, obj_bloempje);
 			if(point_distance(x,y*2,nrstBloem.x,nrstBloem.y*2)<40) {
 				//Yes we have a bloemetje and an emmer!
+				playSound(sound.bucketempty);
 				if(!nrstBloem.isOpen){
 					with(nrstBloem) {
 						event_user(0);
@@ -188,9 +192,13 @@ if(!isRunning)
 		//Is er een pomp, en zo ja is die dicht bij genoeg??
 		if(instance_exists(obj_pomp)){
 			if(point_distance(x,y*2,obj_pomp.x-32,(obj_pomp.y-28)*2)<40) {
-				//Yes we have a bloemetje and an emmer!
-				with(obj_pomp) {
-					event_user(0);
+				//Yes we have a emmer to fill
+				if(!obj_emmer.isFilled)
+				{
+					playSound(sound.bucketfill);
+					with(obj_pomp) {
+						event_user(0);
+					}
 				}
 			}
 		}
@@ -211,6 +219,7 @@ if(!isHitting && keyInteractPressed) {
 			}
 		}
 		if(instance_exists(obj_emmer) && point_distance(x,y*2,obj_emmer.x,obj_emmer.y*2)<40) {
+			playSound(sound.bucketpickup);
 			//Check if we're picking up a volle or a lege emmer
 			if(obj_emmer.isFilled) {
 				currentItem = item.volleemmer;
@@ -225,6 +234,7 @@ if(!isHitting && keyInteractPressed) {
 		}
 		else if(instance_exists(obj_schoffel) && point_distance(x,y*2,instance_nearest(x,y,obj_schoffel).x,instance_nearest(x,y,obj_schoffel).y*2)<40) {
 			//Let's pick up that nearest shovel
+			playSound(sound.weaponpickup);
 			var nrst=instance_nearest(x,y,obj_schoffel);
 			with(nrst)
 			{
@@ -240,7 +250,12 @@ if(!isHitting && keyInteractPressed) {
 	}
 }
 
-
+//SOUND THINGS!!!
+if(footStepCounter>6)
+{
+	footStepCounter=0;
+	playSound(sound.footstep);
+}
 
 /*
 //Dingen op pakken

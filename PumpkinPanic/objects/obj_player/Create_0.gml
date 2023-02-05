@@ -38,3 +38,4 @@ myGamepad=0;
 //Item wielding stuff
 currentItem=item.none;
 
+footStepCounter=0;
