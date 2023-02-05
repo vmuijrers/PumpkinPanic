@@ -182,9 +182,25 @@ if(!isRunning)
 				//BANG!!!!!
 				doRumble(myGamepad, 1, 1, room_speed / 4);
 				var ID=instance_create_depth(x,y,depth-1,obj_swordSlash)
-				ID.image_xscale = moveDir
 				ID.daddy=self.id;
 				playSound(sound.weaponswing);
+				
+				if(hitCharge>30)
+				{
+					ID.damage = 20;
+					ID.attackRange = 96;
+				}
+				else if(hitCharge>15)
+				{
+					ID.damage = 10;
+					ID.attackRange = 48;
+				}
+				else if(hitCharge>15)
+				{
+					ID.damage = 5;
+					ID.attackRange = 24;
+				}
+				ID.image_xscale = moveDir * (ID.attackRange/48);
 			}
 		}
 	}

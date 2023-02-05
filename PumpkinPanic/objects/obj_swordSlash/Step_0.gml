@@ -21,7 +21,7 @@ else
 if(!canHit){exit;}
 
 var result = ds_list_create();
-var _num = collision_circle_list(x ,y- 15,attackRange,obj_enemy, false, true,result,false);
+var _num = collision_circle_list(x+ image_xscale*24 ,y- 15,attackRange*0.6,obj_enemy, false, true,result,false);
 if (_num > 0)
 {
     for (var i = 0; i < _num; ++i;)
