@@ -19,20 +19,23 @@ else
 }
 
 var result = ds_list_create();
-var _num = collision_circle_list(x,y,40,obj_enemy, false, true,result,false);
+var _num = collision_circle_list(x ,y- 15,attackRange,obj_enemy, false, true,result,false);
 if (_num > 0)
 {
     for (var i = 0; i < _num; ++i;)
     {
         enemy = ds_list_find_value(result, i);
-		enemyTakeDamage(self, enemy, damage);
+		if(enemy.hitPoints > 0){
+			enemyTakeDamage(self, enemy, damage);
+			break;
+		}
     }
 }
 ds_list_destroy(result);
 hasfocus=0;
 
 var nrstVine = instance_nearest(x,y,obj_vine);
-if(nrstVine != noone && point_distance(x,y, nrstVine.x, nrstVine.y) < 40){
+if(nrstVine != noone && point_distance(x,y, nrstVine.x, nrstVine.y) < attackRange){
 	with(nrstVine){
 		event_user(0);	
 	}

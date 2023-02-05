@@ -10,7 +10,7 @@ enum swat_state{
 state = swat_state.run;
 event_inherited();
 attackRange = 30;
-moveSpeed = 3;
+moveSpeed = 2;
 hitPoints = 20;
 
 img = 0;

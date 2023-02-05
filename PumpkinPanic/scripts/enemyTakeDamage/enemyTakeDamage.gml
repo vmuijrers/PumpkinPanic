@@ -11,6 +11,8 @@ function enemyTakeDamage(source, target, damage){
 			fx = lengthdir_x(10, point_direction(source.x, source.y, target.x, target.y));
 			zz = -6;
 		}else{
+			fx = lengthdir_x(10, point_direction(source.x, source.y, target.x, target.y));
+			zz = -6;
 			event_user(2);//hit	
 		}
 	}
