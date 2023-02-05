@@ -37,3 +37,5 @@ if(nrstVine != noone && point_distance(x,y, nrstVine.x, nrstVine.y) < 40){
 		event_user(0);	
 	}
 }
+setDepth();
+depth-=1;

@@ -41,52 +41,58 @@ var keyInteract =(keyboard_check(vk_control) || gamepad_button_check(myGamepad,g
 //Movement
 if(hittingStage!=hitStages.hitting)
 {
+	var bucketMod=1;
+	if(currentItem==item.volleemmer)
+	{
+		bucketMod=0.85;
+	}
+	
 	if(keyR){
-	moveDir = 1;
-	if(keyRun && !isHitting)
-	{
-		x += moveSpeed*acceleration*0.5;	
-		if hSpd<0 then hSpd+=acceleration;
-		hSpd+=acceleration;
+		moveDir = 1;
+		if(keyRun && !isHitting && currentItem!=item.volleemmer)
+		{
+			x += moveSpeed*acceleration*0.5;	
+			if hSpd<0 then hSpd+=acceleration;
+			hSpd+=acceleration;
+		}
+		else{
+			x+=moveSpeed*bucketMod;
+		}
 	}
-	else{
-		x+=moveSpeed;
-	}
-}
 	if(keyL){
-	moveDir = -1;
-	if(keyRun && !isHitting)
-	{
-		x -=moveSpeed*acceleration	*0.5
-		if hSpd>0 then hSpd-=acceleration;
-		hSpd-=acceleration
+		moveDir = -1;
+		if(keyRun && !isHitting && currentItem!=item.volleemmer)
+		{
+			x -=moveSpeed*acceleration	*0.5
+			if hSpd>0 then hSpd-=acceleration;
+			hSpd-=acceleration
+		}
+		else{
+			x-=moveSpeed*bucketMod
+		}
 	}
-	else{
-		x-=moveSpeed
-	}
-}
 	if(keyU){ 
-	if(keyRun && !isHitting)
-	{
-		y -= moveSpeed * verticalRatio * acceleration *0.5
-		if vSpd>0 then vSpd-=acceleration;
-		vSpd-=acceleration
+		if(keyRun && !isHitting && currentItem!=item.volleemmer)
+		{
+			y -= moveSpeed * verticalRatio * acceleration *0.5
+			if vSpd>0 then vSpd-=acceleration;
+			vSpd-=acceleration
+		}
+		else{
+			y -= moveSpeed * verticalRatio*bucketMod;	
+		}
 	}
-	else{
-		y -= moveSpeed * verticalRatio;	
-	}
-}
 	if(keyD){
-	if(keyRun && !isHitting)
-	{
-	    y += moveSpeed * verticalRatio * acceleration *0.5
-		if vSpd<0 then vSpd+=acceleration;
-		vSpd+=acceleration
+		if(keyRun && !isHitting && currentItem!=item.volleemmer)
+		{
+			y += moveSpeed * verticalRatio * acceleration *0.5
+			if vSpd<0 then vSpd+=acceleration;
+			vSpd+=acceleration
+		}
+		else{
+			y += moveSpeed * verticalRatio*bucketMod;
+		}
 	}
-	else{
-		y += moveSpeed * verticalRatio;
-	}
-}
 }
 //Do the zoomies
 x+=(hSpd)*0.6 * speedModifier
@@ -135,14 +141,14 @@ vSpd=lengthdir_y(mSpd*(fric),mDir)
 
 
 //Dit is al de slaan logica
-var isRunning=(abs(hSpd)>0 || abs(vSpd)>0)
+var isRunning=(keyRun)
 if(!isRunning)
 {
 	//Continue charging
 	if(hittingStage == hitStages.charging && keyHit)
 	{
 		hitCharge+=1;
-		image_index+=sqrt(hitCharge)*0.2;
+		image_index+=0.3
 		if(image_index>3)
 		{
 			image_index=1
@@ -162,14 +168,14 @@ if(!isRunning)
 		}
 		if(hittingStage == hitStages.hitting) {
 			image_index+=0.3;
-			if(image_index>=sprite_get_number(sprite_index)-0.5) {
+			if(image_index>=sprite_get_number(sprite_index)-1) {
 				hittingStage = hitStages.recovering;
 			}
 		}
 	if(keyHitReleased) {
 		if(hittingStage == hitStages.charging) {
 				hittingStage = hitStages.hitting;
-				image_index=4;
+				image_index=5;
 				//BANG!!!!!
 				doRumble(myGamepad, 1, 1, room_speed / 4);
 				var ID=instance_create_depth(x,y,depth-1,obj_swordSlash)
@@ -198,13 +204,16 @@ if(!isRunning)
 	else if (currentItem == item.none && keyHit) { //Met lege handen kunnen we pompen!
 		//Is er een pomp, en zo ja is die dicht bij genoeg??
 		if(instance_exists(obj_pomp)){
-			if(point_distance(x,y*2,obj_pomp.x-32,(obj_pomp.y-28)*2)<40) {
+			if(point_distance(x,y*2,obj_pomp.x-32,(obj_pomp.y-12)*2)<40) {
 				//Yes we have a emmer to fill
-				if(!obj_emmer.isFilled)
+				if(instance_exists(obj_emmer))
 				{
-					playSound(sound.bucketfill);
-					with(obj_pomp) {
-						event_user(0);
+					if(!obj_emmer.isFilled)
+					{
+						playSound(sound.bucketfill);
+						with(obj_pomp) {
+							event_user(0);
+						}
 					}
 				}
 			}
@@ -263,6 +272,8 @@ if(footStepCounter>6)
 	footStepCounter=0;
 	playSound(sound.footstep);
 }
+setDepth();
+depth-=1
 
 /*
 //Dingen op pakken

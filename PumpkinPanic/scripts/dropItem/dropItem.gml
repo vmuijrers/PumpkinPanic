@@ -7,6 +7,6 @@ function dropItem(_item){
 		instance_create_layer(x,y,"Instances", obj_emmer);	
 	}else if(_item == item.volleemmer){
 		var obj = instance_create_layer(x,y,"Instances", obj_emmer);	
-		obj.isFilled = true;
+		obj.isFilled = false;
 	}
 }
