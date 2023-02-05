@@ -2,7 +2,7 @@
 // You can write your code in this editor
 random_set_seed(random_get_seed())
 level = 0;
-maxLevel = 11;
+maxLevel = 7;
 vineLevelIncrease = 0.5;
 flowersPerLevel = 1;
 halfTileWidth = 32;

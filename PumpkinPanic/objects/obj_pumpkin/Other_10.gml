@@ -3,6 +3,12 @@
 //Grow
 
 level+=1;
+if(level > maxLevel){
+	win_game = true;
+	level = clamp(level, 0, maxLevel);
+	exit;
+}
+
 level = clamp(level, 0, maxLevel);
 numVines = ds_list_size(allVinesList);
 hitPoints += 1;
