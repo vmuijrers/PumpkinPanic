@@ -34,52 +34,58 @@ var keyInteract =(keyboard_check(vk_control) || gamepad_button_check(myGamepad,g
 //Movement
 if(hittingStage!=hitStages.hitting)
 {
+	var bucketMod=1;
+	if(currentItem==item.volleemmer)
+	{
+		bucketMod=0.85;
+	}
+	
 	if(keyR){
-	moveDir = 1;
-	if(keyRun && !isHitting)
-	{
-		x += moveSpeed*acceleration*0.5;	
-		if hSpd<0 then hSpd+=acceleration;
-		hSpd+=acceleration;
+		moveDir = 1;
+		if(keyRun && !isHitting && currentItem!=item.volleemmer)
+		{
+			x += moveSpeed*acceleration*0.5;	
+			if hSpd<0 then hSpd+=acceleration;
+			hSpd+=acceleration;
+		}
+		else{
+			x+=moveSpeed*bucketMod;
+		}
 	}
-	else{
-		x+=moveSpeed;
-	}
-}
 	if(keyL){
-	moveDir = -1;
-	if(keyRun && !isHitting)
-	{
-		x -=moveSpeed*acceleration	*0.5
-		if hSpd>0 then hSpd-=acceleration;
-		hSpd-=acceleration
+		moveDir = -1;
+		if(keyRun && !isHitting && currentItem!=item.volleemmer)
+		{
+			x -=moveSpeed*acceleration	*0.5
+			if hSpd>0 then hSpd-=acceleration;
+			hSpd-=acceleration
+		}
+		else{
+			x-=moveSpeed*bucketMod
+		}
 	}
-	else{
-		x-=moveSpeed
-	}
-}
 	if(keyU){ 
-	if(keyRun && !isHitting)
-	{
-		y -= moveSpeed * verticalRatio * acceleration *0.5
-		if vSpd>0 then vSpd-=acceleration;
-		vSpd-=acceleration
+		if(keyRun && !isHitting && currentItem!=item.volleemmer)
+		{
+			y -= moveSpeed * verticalRatio * acceleration *0.5
+			if vSpd>0 then vSpd-=acceleration;
+			vSpd-=acceleration
+		}
+		else{
+			y -= moveSpeed * verticalRatio*bucketMod;	
+		}
 	}
-	else{
-		y -= moveSpeed * verticalRatio;	
-	}
-}
 	if(keyD){
-	if(keyRun && !isHitting)
-	{
-	    y += moveSpeed * verticalRatio * acceleration *0.5
-		if vSpd<0 then vSpd+=acceleration;
-		vSpd+=acceleration
+		if(keyRun && !isHitting && currentItem!=item.volleemmer)
+		{
+			y += moveSpeed * verticalRatio * acceleration *0.5
+			if vSpd<0 then vSpd+=acceleration;
+			vSpd+=acceleration
+		}
+		else{
+			y += moveSpeed * verticalRatio*bucketMod;
+		}
 	}
-	else{
-		y += moveSpeed * verticalRatio;
-	}
-}
 }
 //Do the zoomies
 x+=(hSpd)*0.6
