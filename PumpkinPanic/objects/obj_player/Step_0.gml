@@ -16,6 +16,13 @@ if(isDown)
 }
 hitCounter++;
 
+if(hittingStage>hitStages.hitting && hitCounter>5)
+{
+	hittingStage=hitStages.none
+}
+
+
+
 if(collision_point(x,y, obj_vine, false, true)){
 	var nrvine = instance_nearest(x,y,obj_vine);
 	speedModifier = 1.0 - slowFactor;
@@ -159,7 +166,7 @@ if(!isRunning)
 	
 	//ALS WE EEN SHOVEL HEBBEN KUNNEN WE BEUKEN!!!
 	if(currentItem >= item.schoffel) {
-		if (hittingStage == hitStages.none || hittingStage>=hitStages.recovering && hitCounter>hitrecovertAt) && keyHitPressed {
+		if (hittingStage == hitStages.none && hitCounter>hitrecovertAt) && keyHitPressed {
 			//Start Hitting!!!!!
 			hittingStage = hitStages.charging;
 			sprite_index=getSprite(guy.twan,animation.hit,currentItem)
@@ -171,7 +178,8 @@ if(!isRunning)
 		}
 		if(hittingStage == hitStages.hitting) {
 			image_index+=0.3;
-			if(image_index>=sprite_get_number(sprite_index)-1) {
+			//if(image_index>=sprite_get_number(sprite_index)-1) {
+			if(hitCounter>4) {
 				hittingStage = hitStages.recovering;
 			}
 		}
