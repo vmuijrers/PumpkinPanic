@@ -7,6 +7,11 @@ if(isDown)
 	{
 		image_index=image_number-2;
 	}
+	/*
+	if(collision_circle(x,y, 40, obj_player,false, true)){
+		isDown = false;	
+	}
+	*/
 	exit;
 }
 
@@ -205,7 +210,7 @@ if(!isHitting && keyInteractPressed) {
 				ot.isDown=false;
 			}
 		}
-		else if(instance_exists(obj_emmer) && point_distance(x,y*2,obj_emmer.x,obj_emmer.y*2)<40) {
+		if(instance_exists(obj_emmer) && point_distance(x,y*2,obj_emmer.x,obj_emmer.y*2)<40) {
 			//Check if we're picking up a volle or a lege emmer
 			if(obj_emmer.isFilled) {
 				currentItem = item.volleemmer;

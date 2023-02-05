@@ -8,7 +8,9 @@ level+=1;
 level = clamp(level, 0, maxLevel);
 numVines = ds_list_size(allVinesList);
 //spawn a new vine
-
+with(obj_enemySpawner){
+	event_user(0);
+}
 
 for(var i =0; i < min(level, 2); i++){
 	randomVine = ds_list_find_value(allVinesList, irandom(ds_list_size(allVinesList)-1));
