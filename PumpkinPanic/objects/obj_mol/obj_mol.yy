@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_mol",
-    "path": "sprites/spr_mol/spr_mol.yy",
+    "name": "spr_mol_attack",
+    "path": "sprites/spr_mol_attack/spr_mol_attack.yy",
   },
   "spriteMaskId": null,
   "visible": true,

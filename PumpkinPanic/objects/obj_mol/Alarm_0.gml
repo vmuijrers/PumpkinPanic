@@ -4,7 +4,7 @@ target = instance_nearest(x,y, obj_player);
 
 if(point_distance(x,y, target.x, target.y) < 30){
 	mode = 1;
-	sprite_index=spr_mol;
+	//sprite_index=spr_mol;
 	image_speed=0.5
 	image_index=0
 	alarm[1]=84

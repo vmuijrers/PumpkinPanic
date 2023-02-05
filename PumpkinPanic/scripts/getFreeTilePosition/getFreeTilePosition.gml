@@ -15,7 +15,7 @@ function getFreeTilePosition(xx, yy, objType){
 			if(xxx == 0 || yyy == 0){ continue; }
 			var xx1 = xxx * 32;
 			var yy1 = yyy * 16;
-			if(!position_meeting(xx + xx1 , yy + yy1, objType) && !position_meeting(xx + xx1 *2 , yy + yy1 *2, objType)){
+			if(!position_meeting(xx + xx1 , yy + yy1, obj_pumpkin) && !position_meeting(xx + xx1 , yy + yy1, objType) && !position_meeting(xx + xx1 *2 , yy + yy1 *2, objType)){
 				var result = [];
 				result[0] = xxx;
 				result[1] = yyy;

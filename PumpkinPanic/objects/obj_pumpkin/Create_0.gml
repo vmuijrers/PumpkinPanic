@@ -3,7 +3,7 @@
 random_set_seed(random_get_seed())
 level = 0;
 maxLevel = 10;
-vineLevelIncrease = 0.25;
+vineLevelIncrease = 1;
 flowersPerLevel = 1;
 halfTileWidth = 32;
 halfTileHeight = 16;
@@ -25,3 +25,9 @@ level_Sprites[5] = spr_pumpkin_05;
 level_Sprites[6] = spr_pumpkin_06;
 level_Sprites[7] = spr_pumpkin_07;
 level_Sprites[8] = spr_pumpkin_08;
+level_Sprites[9] = spr_pumpkin_08;
+level_Sprites[10] = spr_pumpkin_08;
+
+flowerList = ds_list_create();
+var newFlower = instance_create_layer(x - 64,y, "Instances",obj_bloempje);
+ds_list_add(flowerList, newFlower);

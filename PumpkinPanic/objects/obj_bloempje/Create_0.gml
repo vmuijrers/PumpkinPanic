@@ -1,3 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-//event_user(0)
+isOpen = false;
+image_speed = 0.2;
+scale = 0;

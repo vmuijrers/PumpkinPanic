@@ -1,7 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
 //Grow
+nextLevel = true;
+for (var i = 0; i < ds_list_size(flowerList); ++i) {
+    // code here
+	var flower = ds_list_find_value(flowerList, i);
+	nextLevel &= flower.isOpen;
+}
+if(!nextLevel)
+{
+	return;
+}
+
+
 level+=1;
+level = clamp(level, 0, maxLevel);
 numVines = ds_list_size(allVinesList);
 //spawn a new vine
 
@@ -35,7 +48,21 @@ for (var i = 0; i < numVines; ++i) {
 		}
 	}
 }
-for (var i = 0; i < ds_list_size(allVinesList); ++i) {
-	curVine = ds_list_find_value(allVinesList, i);
-    curVine.level += vineLevelIncrease;
+//grow vines
+if(level >= 5){
+	
+	for (var i = 0; i < ds_list_size(allVinesList); ++i) {
+		curVine = ds_list_find_value(allVinesList, i);
+	    curVine.level += vineLevelIncrease;
+	}
+}
+
+//spawn new flowers
+alarm[1] = 60;
+for (var i = 0; i < ds_list_size(flowerList); ++i) {
+    // shrink the flowers
+	var flower = ds_list_find_value(flowerList, i);
+	with(flower){
+		alarm[1] = 60;	
+	}
 }
