@@ -238,16 +238,17 @@ if(!isRunning)
 		if(instance_exists(obj_pomp)){
 			if(point_distance(x,y*2,obj_pomp.x-32,(obj_pomp.y-12)*2)<40) {
 				//Yes we have a emmer to fill
-				if(instance_exists(obj_emmer))
-				{
-					if(!obj_emmer.isFilled)
-					{
-						playSound(sound.bucketfill);
 						with(obj_pomp) {
 							event_user(0);
+							playSound(sound.bucketfill);
 						}
-					}
-				}
+				//if(instance_exists(obj_emmer))
+				//{
+			//		if(!obj_emmer.isFilled)
+			//		{
+						
+			//		}
+			//	}
 			}
 		}
 	}
