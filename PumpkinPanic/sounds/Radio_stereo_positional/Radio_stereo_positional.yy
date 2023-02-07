@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 184.0065,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Radio",
+    "path": "folders/Sounds/Radio.yy",
   },
   "preload": false,
   "sampleRate": 44100,

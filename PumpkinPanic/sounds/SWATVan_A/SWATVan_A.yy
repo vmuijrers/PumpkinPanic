@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 4.0,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "SWATVan",
+    "path": "folders/Sounds/SWATVan.yy",
   },
   "preload": false,
   "sampleRate": 44100,

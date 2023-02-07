@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.53356,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "KillBird",
+    "path": "folders/Sounds/KillBird.yy",
   },
   "preload": false,
   "sampleRate": 44100,

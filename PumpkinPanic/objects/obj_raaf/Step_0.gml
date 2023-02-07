@@ -52,7 +52,7 @@ if(state == bird_state.move){
 }else if(state == bird_state.attack){
 		if(alarm[1] < 0){
 			takeDamage(target, 1);
-			alarm[1] = 30;	
+			alarm[1] = fireRate;	
 		}
 		if(distToPlayer < 100){
 			moveDir = point_direction(x,y, nearest_player.x, nearest_player.y);

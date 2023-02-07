@@ -4,6 +4,7 @@ function takeDamage(target, damage){
 	
 	with(target){
 		hitPoints -= 1;
+		playSound(sound.pumpkinhit);
 		if(hitPoints <= 0){
 			//Game Over!
 			game_over = 1;

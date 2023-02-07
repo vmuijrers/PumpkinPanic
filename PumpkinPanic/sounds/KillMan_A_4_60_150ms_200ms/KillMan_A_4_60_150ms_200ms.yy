@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.395238,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "KillMan",
+    "path": "folders/Sounds/KillMan.yy",
   },
   "preload": false,
   "sampleRate": 44100,

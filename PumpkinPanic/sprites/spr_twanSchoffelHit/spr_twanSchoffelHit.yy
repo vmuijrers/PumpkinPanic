@@ -33,7 +33,7 @@
   "origin": 9,
   "parent": {
     "name": "Schoffel",
-    "path": "folders/Sprites/Teun/Schoffel.yy",
+    "path": "folders/Sprites/Twan/Schoffel.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.632381,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "BucketEmpty",
+    "path": "folders/Sounds/BucketEmpty.yy",
   },
   "preload": false,
   "sampleRate": 44100,

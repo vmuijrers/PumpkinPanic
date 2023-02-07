@@ -33,7 +33,7 @@
   "origin": 7,
   "parent": {
     "name": "Niks",
-    "path": "folders/Sprites/Teun/Niks.yy",
+    "path": "folders/Sprites/Twan/Niks.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

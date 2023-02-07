@@ -10,7 +10,7 @@ enum animation
 	idle=1,
 	running=2,
 	hit=3,
-	gethit=4
+	gethit=4,
 }
 enum item
 {

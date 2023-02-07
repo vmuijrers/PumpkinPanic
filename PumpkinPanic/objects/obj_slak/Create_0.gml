@@ -15,5 +15,5 @@ damage = 1;
 attackRange = 20;
 moveSpeed = 10;
 image_speed = 0.2
-fireRate = room_speed;
+fireRate = room_speed * 3;
 hitPoints = 1;

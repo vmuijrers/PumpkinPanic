@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 3.794195,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Death",
+    "path": "folders/Sounds/Death.yy",
   },
   "preload": false,
   "sampleRate": 44100,

@@ -30,7 +30,7 @@
   "origin": 7,
   "parent": {
     "name": "VolleEmmer",
-    "path": "folders/Sprites/Teun/VolleEmmer.yy",
+    "path": "folders/Sprites/Twan/VolleEmmer.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

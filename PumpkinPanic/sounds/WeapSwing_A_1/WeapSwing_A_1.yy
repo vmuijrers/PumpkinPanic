@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.314671,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Weapon",
+    "path": "folders/Sounds/Weapon.yy",
   },
   "preload": false,
   "sampleRate": 44100,

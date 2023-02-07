@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.552789,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "KillSwat",
+    "path": "folders/Sounds/KillSwat.yy",
   },
   "preload": false,
   "sampleRate": 44100,

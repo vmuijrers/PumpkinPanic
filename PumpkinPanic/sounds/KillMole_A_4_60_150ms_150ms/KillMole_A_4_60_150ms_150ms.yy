@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.632381,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "KillMole",
+    "path": "folders/Sounds/KillMole.yy",
   },
   "preload": false,
   "sampleRate": 44100,

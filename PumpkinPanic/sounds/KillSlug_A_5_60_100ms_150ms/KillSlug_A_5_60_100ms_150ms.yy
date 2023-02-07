@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.474286,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "KillSlug",
+    "path": "folders/Sounds/KillSlug.yy",
   },
   "preload": false,
   "sampleRate": 44100,

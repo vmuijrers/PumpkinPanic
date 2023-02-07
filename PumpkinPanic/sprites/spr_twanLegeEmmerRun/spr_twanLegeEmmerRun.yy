@@ -31,7 +31,7 @@
   "origin": 7,
   "parent": {
     "name": "LegeEmmer",
-    "path": "folders/Sprites/Teun/LegeEmmer.yy",
+    "path": "folders/Sprites/Twan/LegeEmmer.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

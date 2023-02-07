@@ -14,7 +14,10 @@ enum sound {
 	weaponcharge=10,
 	swatintro=11,
 	killman=12,
-	killswat=13
+	killswat=13,
+	pumpkinhit=14,
+	pumpkingrow=15,
+	vinegrow = 16,
 }
 function playSound(soundEffect){
 	sound = -1;
@@ -66,6 +69,15 @@ function playSound(soundEffect){
 		break;
 		case sound.killswat:
 			sound=choose(KillSWAT_A_1_60_150ms_250ms,KillSWAT_A_2_60_150ms_250ms,KillSWAT_A_3_60_150ms_250ms,KillSWAT_A_4_60_150ms_250ms,KillSWAT_A_5_60_150ms_250ms);
+		break;
+		case sound.pumpkinhit:
+			sound=choose(PumpkinHit_01,PumpkinHit_02,PumpkinHit_03,PumpkinHit_04,PumpkinHit_05);
+		break;
+		case sound.pumpkingrow:
+			sound=choose(GrowPumpkin_A_1,GrowPumpkin_A_2,GrowPumpkin_A_3,GrowPumpkin_A_4,GrowPumpkin_A_5);
+		break;
+		case sound.vinegrow:
+			sound=choose(GrowRoot_A_1,GrowRoot_A_2,GrowRoot_A_3,GrowRoot_A_4,GrowRoot_A_5);
 		break;
 	}
 	audio_play_sound(sound,100,false)

@@ -21,7 +21,7 @@ if(target != noone){
 }
 
 if(state == state.move){
-		
+	sprite_index = spr_snail;
 	dir = point_direction(x,y,target.x,target.y);	
 	dx = lengthdir_x(moveSpeed, dir);
 	xDir = sign(dx);
@@ -30,12 +30,12 @@ if(state == state.move){
 	y += 1.0 / room_speed * dy;
 	
 }else if (state == state.attack){
-	
+	sprite_index = spr_snail_attack;
 	if(alarm[0] < 0)
 	{
 		alarm[0] = fireRate;
 		//attack!
-		takeDamage(target, damage);	
+		
 
 	}
 	
