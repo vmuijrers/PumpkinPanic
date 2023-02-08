@@ -37,7 +37,7 @@ if(state == swat_state.run){
 	if(distToPlayer <= attackRange && alarm[0] < 0){
 		alarm[0] = 60;
 		if(alarm[2] < 0){
-			alarm[2] = 10; //check for damage
+			alarm[2] = 15; //check for damage
 		}
 	}
 	if(distToPlayer > attackRange && alarm[0] < 0){
